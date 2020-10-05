@@ -1,0 +1,45 @@
+body {
+    background-color: #f6f7f8;
+    font-size: small!important;
+}
+
+.container {
+    background-color: white;
+    margin-top: 30px;
+    padding:40px
+}
+
+.mainPane {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.avatarContainer {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
+    align-self: center;
+    width: 150px;
+    height: 150px;
+}
+
+.abs {
+    position: absolute;
+    bottom: 20px;
+    display: none;
+}
+
+.cardsWrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
