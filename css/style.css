@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@100&display=swap');
+
 body {
     background-color: #f6f7f8;
     font-size: small!important;
@@ -10,9 +12,9 @@ body {
 }
 
 .mainPane {
-    border: 1px solid rgba(0,0,0,.125);
     border-radius: 5px;
     padding-top: 20px;
+    background-color: #f6f7f8;
 }
 
 .avatarContainer {
@@ -34,12 +36,162 @@ body {
     display: none;
 }
 
+.abs:hover {
+    background-color: #262637;
+    opacity: 0.9;
+    border: none;
+}
+
 .cardsWrapper {
     display: flex;
     flex-flow: row wrap;
 }
-
+/* 
 .card {
-    margin-right: 20px;
+    margin-right: 21px;
+    margin-bottom: 50px;
+}
+
+.card-body .top {
+    float: right;
+}
+
+.card-body .mid {
+    display: inline;
+}
+
+ */
+.list-group .active {
+    background-color: #262637;
+    border-color: #262637;
+}
+
+.list-group .list-group-item {
+    font-weight: bolder;
+}
+
+.btn-primary {
+    background-color: #262637;
+    border-color: #262637;
+}
+
+.ff_one {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 8px;
+    height: 150px;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 20px 20px 20px 25px;
+    cursor: pointer;
+}
+
+.ff_one .icon {
+    border-radius: 50%;
+    background-color: #fff2fa;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+}
+
+.ff_one .detais {
+    padding-top: 25px;
+}
+
+.ff_one .detais .timer {
+    font-size: 36px;
+    color: #484848;
+    line-height: 1.2;
+    font-family: 'Piazzolla', serif;
+}
+
+.ff_one .detais p {
+    font-size: 16px;
+    color: rgb(119, 119, 119);
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+
+.auxLinks {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    justify-content: right;
+}
+
+.cusBtn {
+    background-color: #d1fab6;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.cusBtn:hover {
+    background-color: #f6fff0;
+}
+
+.bigCardsWrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.style2 p {
+    font-size: 16px;
+    color: rgb(119, 119, 119);
     margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.longer {
+    height: fit-content;
+}
+
+.leadsSummaryTile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 0;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.leadsSummaryTile:hover {
+    background-color: #fff2fa;
+}
+
+.leadsSummaryTile .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.minusMB p {
+    margin-bottom: 15px;
+}
+
+.initial {
+    font-size: medium;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    background-color: #262637;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.name {
+    font-weight: bolder;
+    margin: 0 5px;
 }
