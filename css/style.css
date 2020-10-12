@@ -6,91 +6,86 @@ body {
 }
 
 .container {
-    background-color: white;
     margin-top: 30px;
     padding:40px
-}
-
-.mainPane {
-    border-radius: 5px;
-    padding-top: 20px;
-    background-color: #f6f7f8;
-}
-
-.avatarContainer {
-    margin-bottom: 20px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.avatar {
-    align-self: center;
-    width: 150px;
-    height: 150px;
-}
-
-.abs {
-    position: absolute;
-    bottom: 20px;
-    display: none;
-}
-
-.abs:hover {
-    background-color: #262637;
-    opacity: 0.9;
-    border: none;
 }
 
 .cardsWrapper {
     display: flex;
     flex-flow: row wrap;
 }
-/* 
-.card {
-    margin-right: 21px;
-    margin-bottom: 50px;
-}
 
-.card-body .top {
-    float: right;
-}
-
-.card-body .mid {
-    display: inline;
-}
-
- */
-.list-group .active {
-    background-color: #262637;
-    border-color: #262637;
-}
-
-.list-group .list-group-item {
+.subscription {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 16px;
     font-weight: bolder;
+    color: #484848;
 }
 
-.btn-primary {
-    background-color: #262637;
-    border-color: #262637;
+.ff_two {
+    height: 230px!important;
+    background-color: #fff!important;
 }
 
 .ff_one {
-    background-color: #ffffff;
+    background-color: transparent;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(235, 235, 235);
     border-radius: 8px;
-    height: 150px;
+    height: 200px;
     margin-bottom: 30px;
     position: relative;
     padding: 20px 20px 20px 25px;
     cursor: pointer;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+}
+
+.breadcrumb-item a {
+    color: #fd5573;
+}
+.breadcrumb {
+    background-color: #262637;
+    margin: 10px 50px
+}
+
+.logoBackground {
+    background-color: #ffffff;
+    background-image: url(../img/logoOpacity.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: -80px;
+    border-radius: 8px;
+}
+
+.waterMarked {
+    background-image: url(../img/logoOpacity.png);
+    background-size: 10%;
+    background-color: #262637!important;
+}
+
+.waterMarked .ins {
+    color: #fd5573;
+}
+
+.waterMarked .cusBtn {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #fd5573;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ff_one .icon {
     border-radius: 50%;
-    background-color: #fff2fa;
+    background-color: #fae3e7 /*#fd5573*/;
     float: right;
     height: 60px;
     line-height: 60px;
@@ -107,13 +102,46 @@ body {
     color: #484848;
     line-height: 1.2;
     font-family: 'Piazzolla', serif;
+    font-weight: bolder;
 }
 
 .ff_one .detais p {
     font-size: 16px;
-    color: rgb(119, 119, 119);
+    color: #484848;
     margin-bottom: 0;
     font-weight: bolder;
+}
+
+.detais small {
+    font-size: 13px;
+    font-weight: bolder;
+    color: rgb(119, 119, 119);;
+}
+
+.summary span {
+    color: #000;
+    font-weight: bolder;
+}
+
+.summaryWrap {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* .summary small {
+    text-align: center;
+} */
+
+.detais small span {
+    color: #000;
 }
 
 .auxLinks {
@@ -122,25 +150,18 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 10px;
-    justify-content: right;
+    padding: 5px 10px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #fd5573;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .cusBtn {
-    background-color: #d1fab6;
-    text-align: center;
-    padding: 5px;
     margin: 5px;
-    border-radius: 8px;
-}
-
-.cusBtn:hover {
-    background-color: #f6fff0;
-}
-
-.bigCardsWrapper {
-    display: flex;
-    flex-flow: row wrap;
+    border-radius: 10px;
 }
 
 .style2 p {
@@ -150,48 +171,80 @@ body {
     font-weight: bolder;
 }
 
-.longer {
-    height: fit-content;
+.padding {
+    padding: 50px 10%;
 }
 
-.leadsSummaryTile {
+.greeting {
+    padding: 10px 25px 10px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 3px 0;
-    justify-content: space-between;
-    border-radius: 5px;
-}
-
-.leadsSummaryTile:hover {
-    background-color: #fff2fa;
-}
-
-.leadsSummaryTile .left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.minusMB p {
+    width: fit-content;
+    margin-left: 20px;
     margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
 }
 
-.initial {
+.greeting img {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.infoWrapper p {
+    margin-bottom: 0;
+    color: #fd5573;
+    font-weight: 700;
+}
+
+.infoWrapper h5 {
+    margin-bottom: 3px;
+}
+
+.ins {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.icon-bar {
+    width: 70px; /* Set a specific width */
+    background-color: #262637; /* Dark-grey background */
+    position: absolute;
+    top: 15%;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+}
+
+.icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 10px 10px 10px 20px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 25px; /* Increased font-size */
+    text-decoration: none;
+}
+
+.icon-bar a i {
+    margin: 10px;
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.icon-bar .active {
+    background-color: #fd5573; /* Add an active/current color */
+}
+
+.icon-bar span {
+    display: none;
     font-size: medium;
-    font-weight: bolder;
-    width: 25px;
-    height: 25px;
-    background-color: #262637;
-    border-radius: 50%;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-}
-
-.name {
-    font-weight: bolder;
-    margin: 0 5px;
+    font-weight: 700;
 }
