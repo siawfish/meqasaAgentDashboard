@@ -24,18 +24,13 @@ body {
     color: #484848;
 }
 
-.ff_two {
-    height: 230px!important;
-    background-color: #fff!important;
-}
-
 .ff_one {
-    background-color: transparent;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(235, 235, 235);
     border-radius: 8px;
-    height: 200px;
+    height: 230px;
+    background-color: #fff;
     margin-bottom: 30px;
     position: relative;
     padding: 20px 20px 20px 25px;
@@ -48,6 +43,7 @@ body {
 .breadcrumb-item a {
     color: #fd5573;
 }
+
 .breadcrumb {
     background-color: #262637;
     margin: 10px 50px
@@ -64,13 +60,12 @@ body {
 }
 
 .waterMarked {
-    background-image: url(../img/logoOpacity.png);
     background-size: 10%;
     background-color: #262637!important;
 }
 
 .waterMarked .ins {
-    color: #fd5573;
+    color: #fff;
 }
 
 .waterMarked .cusBtn {
@@ -85,7 +80,7 @@ body {
 
 .ff_one .icon {
     border-radius: 50%;
-    background-color: #fae3e7 /*#fd5573*/;
+    background-color: #dedefa /*#fd5573*/;
     float: right;
     height: 60px;
     line-height: 60px;
@@ -99,7 +94,7 @@ body {
 
 .ff_one .detais .timer {
     font-size: 36px;
-    color: #484848;
+    color: #fd5573;
     line-height: 1.2;
     font-family: 'Piazzolla', serif;
     font-weight: bolder;
@@ -108,7 +103,7 @@ body {
 .ff_one .detais p {
     font-size: 16px;
     color: #484848;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-weight: bolder;
 }
 
@@ -117,28 +112,6 @@ body {
     font-weight: bolder;
     color: rgb(119, 119, 119);;
 }
-
-.summary span {
-    color: #000;
-    font-weight: bolder;
-}
-
-.summaryWrap {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    margin-top: 10px;
-}
-
-.summary {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-/* .summary small {
-    text-align: center;
-} */
 
 .detais small span {
     color: #000;
@@ -216,6 +189,7 @@ body {
     background-color: #262637; /* Dark-grey background */
     position: absolute;
     top: 15%;
+    z-index: 1;
     -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
     -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
     box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
@@ -247,4 +221,57 @@ body {
     display: none;
     font-size: medium;
     font-weight: 700;
+}
+
+.sectionBoard {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 4%;
+    text-align: center;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+}
+
+.section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatarContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.avatarContainer img {
+    margin-right: 10px;
+}
+
+.avatarContainer p {
+    text-align: left;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.avatarContainer p span {
+    color: #fd5573;
+    font-weight: 300;
+}
+
+.inputField {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }

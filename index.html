@@ -25,22 +25,20 @@
         </div>
         <div class="cardsWrapper">
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="logoBackground">
-                    <div class="ff_one style2">
-                        <div class="icon"><img src="assets/icons/border-width.svg" alt="" width="30" height="30" title="border-width"></div>
-                        <div class="detais">
-                            <div class="timer" data-count="10">0</div>
-                            <p>Active Listings</p>
-                            <small>Total Listings: <span>30</span></small><br>
-                            <small>Pending Listings: <span>2</span></small>
+                <div class="ff_one style2">
+                    <div class="icon"><img src="assets/icons/border-width.svg" alt="" width="30" height="30" title="border-width"></div>
+                    <div class="detais">
+                        <div class="timer" data-count="10">0</div>
+                        <p>Active Listings</p>
+                        <small>Total Listings: <span>30</span></small><br>
+                        <small>Pending Listings: <span>2</span></small>
+                    </div>
+                    <div class="auxLinks waterMarked">
+                        <div class="ins">
+                            View and manage your listings
                         </div>
-                        <div class="auxLinks">
-                            <div class="ins">
-                                View and manage your listings
-                            </div>
-                            <div class="cusBtn">
-                                <img src="assets/icons/arrow-right-circle-fill.svg" alt="" width="20" height="20" >
-                            </div>
+                        <div class="cusBtn">
+                            <img src="assets/icons/arrow-right-circle-fill.svg" alt="" width="20" height="20" >
                         </div>
                     </div>
                 </div>
@@ -56,7 +54,7 @@
                             <small>Total Bumps: <span>30</span></small><br>
                             <small>Scheduled Bumps: <span>2</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 View, manage and schedule bumps
                             </div>
@@ -77,7 +75,7 @@
                             <p>Active Top Ads</p>
                             <small>Total Top Ads: <span>30</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 Activate and manage your Top Ads
                             </div>
@@ -98,7 +96,7 @@
                             <p>Active Premium</p>
                             <small>Total Premium: <span>30</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 Activate and manage your Premiums
                             </div>
@@ -119,7 +117,7 @@
                             <p>Active Premium +</p>
                             <small>Total Premium +: <span>30</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 Activate and manage your Premium+
                             </div>
@@ -133,7 +131,7 @@
 
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="logoBackground">
-                    <div class="ff_one style2">
+                    <div class="ff_one ff_two style2">
                         <div class="icon"><img src="assets/icons/bell-fill.svg" alt="" width="30" height="30" title="cash-stack"></div>
                         <div class="detais">
                             <div class="timer" data-count="30">0</div>
@@ -141,7 +139,7 @@
                             <small>Total Leads: <span>30</span></small><br>
                             <small>Answered Leads: <span>13</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 Read and respond to leads
                             </div>
@@ -160,10 +158,10 @@
                         <div class="detais">
                             <div class="timer" data-count="31">0</div>
                             <p>Daily Engagements</p>
-                            <small>Monthly property views: <span>30</span></small><br>
-                            <small>Monthly property leads: <span>13</span></small>
+                            <small>Monthly views: <span>30</span></small><br>
+                            <small>Monthly leads: <span>13</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 View statistics of your listings
                             </div>
@@ -184,7 +182,7 @@
                             <p>Current Subscription</p>
                             <small>Expires: <span>22.12.20</span></small>
                         </div>
-                        <div class="auxLinks">
+                        <div class="auxLinks waterMarked">
                             <div class="ins">
                                 Purchase and manage subscription plans
                             </div>
@@ -217,10 +215,6 @@
                 })
             })
 
-            $('.greeting').click(function(){
-                window.location.replace('profile.html')
-            })
-
             $(".ff_one").hover(function(){
                 $(this).children(".auxLinks").css({
                     display:"flex"
@@ -229,6 +223,10 @@
                 $(this).children(".auxLinks").css({
                     display:"none"
                 })
+            })
+
+            $('.greeting').click(function(){
+                window.location.replace('profile.html')
             })
 
             $('.timer').each(function() {
