@@ -31,19 +31,86 @@
             <a href="#"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
         </div>
     
-        <div class="container-fluid padding">
+        <div style="margin-left: 10%;" class="container">
             <div class="col-12">
                 <div class="sectionBoard">
-                    <h3>Personal Information</h3>
+                    <h3><i class="fa fa-user" aria-hidden="true"></i> Personal Information</h3>
                     <div class="section">
                         <div class="avatarContainer">
-                            <img width="80px" height="80px" src="img/avatar.png" alt="">
+                            <div class="avatarWrapper">
+                                <img width="80px" height="80px" src="img/avatar.png" alt="">
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                            </div>
                             <p>Gerald Amanor <br> <span>Jools Inc</span></p>
                         </div>
                         <div class="inputField">
                             <label for="experience">Experience</label>
                             <input type="number" />
-                            <small>What is your experience in years</small>
+                            <small>What is your experience in years?</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="about">About</label>
+                            <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                            <small>Tell us something about yourself</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionBoard">
+                    <h3 style="margin-bottom:50px;"><i class="fa fa-address-card" aria-hidden="true"></i> Contact Information</h3>
+                    <div class="section">
+                        <div class="inputField">
+                            <label for="experience">Mobile Phone Number</label>
+                            <input type="number" />
+                            <small>meQasa will send notifications to this number</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">WhatsApp Number</label>
+                            <input type="number" />
+                            <small>Property seekers may want to WhatsApp you</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Other Phone Number</label>
+                            <input type="number" />
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Alternate Email Address</label>
+                            <input type="number" />
+                            <small>This email address will get a copy of your lead notification emails</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Locality</label>
+                            <input type="number" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sectionBoard">
+                    <h3 style="margin-bottom:50px;"><i class="fa fa-handshake-o" aria-hidden="true"></i> Agent Fees</h3>
+                    <div class="section">
+                        <div class="inputField">
+                            <label for="experience">Your Registration Fee</label>
+                            <input type="number" />
+                            <small>Currency: &#8373;</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Your Commission Rate (Commission from Landlord on Property Rented)</label>
+                            <input type="number" />
+                            <small>Commission rate in %</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Your Commission Rate (Commission from Tenant on Property Rented)</label>
+                            <input type="number" />
+                            <small>Commission rate in %</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Your Commission Rate (Commission from Seller on Property Sold)</label>
+                            <input type="number" />
+                            <small>Commission rate in %</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Your Commission Rate (Commission from Buyer on Property Sold)</label>
+                            <input type="number" />
+                            <small>Commission rate in %</small>
                         </div>
                     </div>
                 </div>
@@ -76,6 +143,16 @@
                 })
                 $('.icon-bar a').css({
                    textAlign:'center'
+               })
+           })
+
+           $(".avatarWrapper").hover(function(){
+               $(".avatarWrapper i").css({
+                   display:"block"
+               })
+           }, function(){
+                $(".avatarWrapper i").css({
+                   display:"none"
                })
            })
        })

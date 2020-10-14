@@ -187,7 +187,8 @@ body {
 .icon-bar {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
-    position: absolute;
+    position: sticky;
+    height: fit-content;
     top: 15%;
     z-index: 1;
     -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
@@ -238,6 +239,14 @@ body {
     box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
 }
 
+.sectionBoard i {
+    color: #fd5573;
+}
+
+.sectionBoard h3 {
+    color: #262637;
+}
+
 .section {
     display: flex;
     align-items: flex-start;
@@ -274,4 +283,54 @@ body {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
+    background-color: #dedefa;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.inputField input {
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.inputField textarea {
+    width: 90%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    font-size: 15px;
+}
+
+.inputField label, small {
+    font-weight: bolder;
+    text-align: left;
+}
+
+.inputField input:focus, .inputField textarea:focus {
+    border: 2px solid #262637;
+}
+
+.avatarWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarWrapper i {
+    position: absolute;
+    font-size: xx-large;
+    color: #fd5573;
+    cursor: pointer;
+    display: none;
 }
