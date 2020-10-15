@@ -256,6 +256,18 @@ body {
     margin-right: auto;
 }
 
+.btn-primary {
+    background-color: #262637!important;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.section .long {
+    width: 100%;
+    visibility: hidden;
+}
+
 .avatarContainer {
     display: flex;
     align-items: center;
