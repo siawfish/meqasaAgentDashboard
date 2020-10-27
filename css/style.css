@@ -3,16 +3,69 @@
 body {
     background-color: #f6f7f8;
     font-size: small!important;
+    overflow-x: hidden!important;
 }
 
 .container {
-    margin-top: 30px;
-    padding:40px
+    margin-top: 30px;    
 }
 
 .cardsWrapper {
     display: flex;
     flex-flow: row wrap;
+}
+
+.nav-link {
+    color: #262637;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #fd5573;
+}
+
+.nav-tabs .nav-link {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #fd5573;
+    font-weight: bold;
+}
+
+.personalInformationPane {
+    text-align: center;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 8px;
+    height: 105%;
+}
+
+.personalInformationPane .edit {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    display: none;
+    outline: none;
+}
+
+.otherInformationPane {
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    padding: 60px 0 40px;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    height: 100%;
 }
 
 .subscription {
@@ -22,6 +75,18 @@ body {
     font-size: 16px;
     font-weight: bolder;
     color: #484848;
+}
+
+.tab-pane {
+    position: relative;
+}
+
+.tab-pane .edit {
+    position: absolute;
+    right: 20px;
+    top: -40px;
+    display: none;
+    outline: none;
 }
 
 .ff_one {
@@ -187,7 +252,7 @@ body {
 .icon-bar {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
-    position: sticky;
+    position: absolute;
     height: fit-content;
     top: 15%;
     z-index: 1;
@@ -265,22 +330,24 @@ body {
 
 .section .long {
     width: 100%;
-    visibility: hidden;
+    display: none;
 }
 
 .avatarContainer {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.avatarContainer img {
-    margin-right: 10px;
+.avatarWrapper img {
+    margin-bottom: 15px;
 }
 
 .avatarContainer p {
-    text-align: left;
+    text-align: center;
     font-weight: bolder;
     font-size: large;
     margin-bottom: 0;
@@ -288,7 +355,8 @@ body {
 
 .avatarContainer p span {
     color: #fd5573;
-    font-weight: 300;
+    font-weight: bold;
+    font-size: small;
 }
 
 .inputField {
@@ -297,14 +365,14 @@ body {
     flex-direction: column;
     width: 100%;
     background-color: #dedefa;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .inputField input {
-    width: 90%;
-    height: 40px;
+    width: 100%;
+    height: 30px;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -314,7 +382,7 @@ body {
 }
 
 .inputField textarea {
-    width: 90%;
+    width: 100%;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -344,5 +412,495 @@ body {
     font-size: xx-large;
     color: #fd5573;
     cursor: pointer;
+    display: none;
+}
+
+.captionArea p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.captionArea .actions {
+    padding: 15px 0 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.captionArea .actions button {
+    background-color: #262637;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.captionArea .priceRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.captionArea .priceRow .stats {
+    font-size: 15px;
+    color: #333;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.captionArea .priceRow .stats i{
+    font-size: 20px;
+    color: #fd5573;
+}
+
+.captionArea .priceRow .stats span {
+    margin-left: 10px;
+}
+
+.noMargin {
+    margin: 10px 0 0;
+    padding: 0 30px 0 0;
+}
+
+.listingContainer {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 10px;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    cursor: pointer;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.showWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listingContainer .left img {
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.hiddenWrapper .right .amenities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hiddenWrapper .right .amenities .amenitiesList {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #fd5573;
+    margin-right: 2px;
+}
+
+.hiddenWrapper .middle .listRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.listRow .listWrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: #484848;
+}
+
+.hiddenWrapper .right label {
+    font-weight: bold;
+    color: #262637;
+}
+
+.hiddenWrapper {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: #f6f7f8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.hiddenWrapper .middle label {
+    font-weight: bold;
+    color: #262637;
+}
+
+.hiddenWrapper .middle {
+    display: flex;
+    flex-direction: column;
+    flex: 1.6;
+}
+
+.hiddenWrapper .right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 0.7;
+}
+
+.hiddenWrapper .thumbnails {
+    margin-top: 10px;
+}
+
+.hiddenWrapper .left {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    flex: 0.7;
+}
+
+.hiddenWrapper .thumbnails img {
+    margin-right: 2px;
+}
+
+.listingContainer .middle {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.listingContainer .middle h5 {
+    color: #484848;
+}
+
+.leftRightWrap {
+    display: flex;
+    flex-direction: row;
+    flex: 0.9;
+    align-items: center;
+}
+
+.listingContainer .right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    justify-content: space-between;
+    color: rgb(119, 119, 119);
+}
+
+.listingContainer .right .actions {
+    padding: 15px 0 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.listingContainer .right .actions button {
+    background-color: #262637;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.addListingsWrapper {
+    height: 85%;
+    overflow: hidden;
+    overflow-y: auto;
+    position: sticky;
+    padding: 0 30px;
+    display: none;
+}
+
+.label {
+    font-weight: bolder;
+    text-align: left;
+}
+
+.scrollContainer {
+    height: 75%;
+    overflow: auto;
+    position: fixed;
+}
+
+.colListingRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.listingContainer .right .active {
+    margin-bottom: 15px;
+    font-weight: bold;  
+    display: flex;
+    justify-content: flex-end;
+}
+
+.listingContainer .right .active span {
+    border: 2px solid green;
+    padding: 0 5px;
+    border-radius: 15px;
+    background-color: lightgreen;
+    color: #000;
+}
+
+.listingContainer .right .pending {
+    margin-bottom: 15px;
+    font-weight: bold;  
+    display: flex;
+    justify-content: flex-end;
+}
+
+.listingContainer .right .pending span {
+    border: 2px solid #262637;
+    padding: 0 5px;
+    border-radius: 15px;
+    background-color: #dedefa;
+    color: #000;
+}
+
+.listingContainer .right .stats i{
+    font-size: 20px;
+    color: #fd5573;
+}
+
+.listingContainer .right .stats {
+    font-size: 15px;
+    color: #333;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.listingContainer .right .stats span {
+    margin-left: auto;
+}
+
+.listingsSearch {
+    width: 100%;
+    margin: 10px 0 0;
+    height: 35px;
+    border-radius: 8px;
+    border-color: #262637;
+    outline: none;
+    padding: 0 10px;
+}
+
+.addListing {
+    position: absolute;
+    top: 8.5%;
+    right:17%;
+    background-color: #fd5573;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: larger;
+    padding: 5px 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: none!important;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+}
+
+.modal {
+    padding-top: 6%;
+    left:-10%;
+}
+
+.addListing:hover {
+    transform: scale(1.05)
+}
+
+.addListing i {
+    color: #262637;
+    font-size: xx-large;
+    margin-right: 5px;
+}
+
+.trackRow {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.trackRow .active {
+    background-color: #dedefa;
+}
+
+.trackPage {
+    padding: 8px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.trackPage h6 {
+    text-align: center;
+}
+
+.trackPage span {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #262637;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.fieldsWrapper {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.line {
+    width: 50px;
+    border: 0.5px solid #dee2e6;
+}
+
+.modal-content {
+    width: fit-content!important;
+    border-radius: 15px!important;
+}
+
+.actionsWrapper {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.actionsWrapper button {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #262637;
+    color: #fff;
+    font-weight: bold;
+}
+
+.actionsWrapper button i {
+    color: #fd5573;
+}
+
+.checkboxField {
+    padding-top: 5px;
+}
+
+.containerContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+.containerContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #dedefa;
+    border-radius: 8px;
+}
+  
+  /* On mouse-over, add a grey background color */
+.containerContainer:hover input ~ .checkmark {
+    border: 2px solid #262637;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.containerContainer input:checked ~ .checkmark {
+    background-color: #fd5573;
+    border: 2px solid #262637;
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.containerContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.containerContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.addImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 1px dashed#fd5573;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: #fd5573;
+    cursor: pointer;
+}
+
+.page2 {
     display: none;
 }

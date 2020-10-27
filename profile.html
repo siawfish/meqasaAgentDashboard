@@ -20,8 +20,8 @@
     <div class="row">
         <div class="icon-bar">
             <a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a>
-            <a class="active" href="#"><i class="fa fa-user"></i><span>Profile</span></a>
-            <a href="#"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
+            <a class="active" href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
+            <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
             <a href="#"><i class="fa fa-envelope"></i><span>My Leads</span></a>
             <a href="#"><i class="fa fa-bolt"></i><span>Bumps</span></a>
             <a href="#"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
@@ -32,96 +32,107 @@
         </div>
     
         <div class="container">
-            <div class="col-12">
-                <div class="sectionBoard">
-                    <h3><i class="fa fa-user" aria-hidden="true"></i> Personal Information</h3>
-                    <div class="section">
-                        <div class="avatarContainer">
-                            <div class="avatarWrapper">
-                                <img width="80px" height="80px" src="img/avatar.png" alt="">
-                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="personalInformationPane">
+                        <button class="btn-primary btn-sm edit">edit</button>
+                        <div class="section">
+                            <div class="avatarContainer">
+                                <div class="avatarWrapper">
+                                    <img width="200px" height="200px" src="img/avatar.png" alt="">
+                                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                </div>
+                                <p>Gerald Amanor<br> <span>Jools Inc</span></p>
                             </div>
-                            <p>Gerald Amanor <br> <span>Jools Inc</span></p>
-                        </div>
-                        <div class="inputField">
-                            <label for="experience">Experience</label>
-                            <input value="12" id="experience" type="number" />
-                            <small>What is your experience in years?</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="about">About</label>
-                            <textarea id="about" rows="4" cols="50">I am me, the real estate king</textarea>
-                            <small>Tell us something about yourself</small>
-                        </div>
-                        <button class="btn-primary btn-lg long">Save</button>
+                            <div class="inputField">
+                                <label for="experience">Experience</label>
+                                <input value="12" id="experience" type="number" />
+                                <small>What is your experience in years?</small>
+                            </div>
+                            <div class="inputField">
+                                <label for="about">About</label>
+                                <textarea id="about" rows="3" cols="50">I am me, the real estate king</textarea>
+                                <small>Tell us something about yourself</small>
+                            </div>
+                            <button class="btn-primary btn-sm long">Save</button>
+                        </div> 
                     </div>
                 </div>
-                <div class="sectionBoard">
-                    <h3 style="margin-bottom:50px;"><i class="fa fa-address-card" aria-hidden="true"></i> Contact Information</h3>
-                    <div class="section">
-                        <div class="inputField">
-                            <label for="mobile">Mobile Phone Number</label>
-                            <input id=mobile value="0277077099" type="number" />
-                            <small>meQasa will send notifications to this number</small>
+                <div class="col-md-8">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="contact-information" data-toggle="tab" role="tab" aria-controls="contact-information" aria-selected="true" href="#contact-information">Contact Information</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="agent-fees" data-toggle="tab" role="tab" aria-controls="agent-fees" aria-selected="true" href="#agent-fees">Agent Fees</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content otherInformationPane">
+                        <div class="tab-pane fade show active" id="contact-information" role="tabpanel" aria-labelledby="contact-information">
+                            <button class="btn-primary btn-sm edit">edit</button>
+                            <div class="section">
+                                <div class="inputField">
+                                    <label for="mobile">Mobile Phone Number</label>
+                                    <input id=mobile value="0277077099" type="number" />
+                                    <small>meQasa will send notifications to this number</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="WhatsApp">WhatsApp Number</label>
+                                    <input value="0277088077" id="whatsapp" type="number" />
+                                    <small>Property seekers may want to WhatsApp you</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="phone">Other Phone Number</label>
+                                    <input value="0244088022" id="phone" type="number" />
+                                </div>
+                                <div class="inputField">
+                                    <label for="email">Alternate Email Address</label>
+                                    <input value="xyz@mail.com" id="email" type="email" />
+                                    <small>This email address will get a copy of your lead notification emails</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="locality">Locality</label>
+                                    <input value="Achimota" id="locality" type="text" />
+                                </div>
+                                <button class="btn-primary btn-sm long">Save</button>
+                            </div> 
                         </div>
-                        <div class="inputField">
-                            <label for="WhatsApp">WhatsApp Number</label>
-                            <input value="0277088077" id="whatsapp" type="number" />
-                            <small>Property seekers may want to WhatsApp you</small>
+                        <div class="tab-pane fade" id="agent-fees" role="tabpanel" aria-labelledby="agent-fees">
+                            <button class="btn btn-primary btn-sm edit">edit</button>
+                            <div class="section">
+                                <div class="inputField">
+                                    <label for="registrationFee">Your Registration Fee</label>
+                                    <input id="registrationFee" value="50" type="number" />
+                                    <small>Currency: &#8373;</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="landlordRate">Your Commission Rate (Commission from Landlord on Property Rented)</label>
+                                    <input id="landlordRate" value="20" type="number" />
+                                    <small>Commission rate in %</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="tenantRate">Your Commission Rate (Commission from Tenant on Property Rented)</label>
+                                    <input id="tenantRate" value="20" type="number" />
+                                    <small>Commission rate in %</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="sellerRate">Your Commission Rate (Commission from Seller on Property Sold)</label>
+                                    <input id="sellerRate" value="20" type="number" />
+                                    <small>Commission rate in %</small>
+                                </div>
+                                <div class="inputField">
+                                    <label for="buyerRate">Your Commission Rate (Commission from Buyer on Property Sold)</label>
+                                    <input id="buyerRate" value="20" type="number" />
+                                    <small>Commission rate in %</small>
+                                </div>
+                                <button class="btn-primary btn-sm long">Save</button>
+                            </div>
                         </div>
-                        <div class="inputField">
-                            <label for="phone">Other Phone Number</label>
-                            <input value="0244088022" id="phone" type="number" />
-                        </div>
-                        <div class="inputField">
-                            <label for="email">Alternate Email Address</label>
-                            <input value="xyz@mail.com" id="email" type="email" />
-                            <small>This email address will get a copy of your lead notification emails</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="locality">Locality</label>
-                            <input value="Achimota" id="locality" type="text" />
-                        </div>
-                        <button class="btn-primary btn-lg long">Save</button>
-                    </div>
-                </div>
-
-                <div class="sectionBoard">
-                    <h3 style="margin-bottom:50px;"><i class="fa fa-handshake-o" aria-hidden="true"></i> Agent Fees</h3>
-                    <div class="section">
-                        <div class="inputField">
-                            <label for="registrationFee">Your Registration Fee</label>
-                            <input id="registrationFee" value="50" type="number" />
-                            <small>Currency: &#8373;</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="landlordRate">Your Commission Rate (Commission from Landlord on Property Rented)</label>
-                            <input id="landlordRate" value="20" type="number" />
-                            <small>Commission rate in %</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="tenantRate">Your Commission Rate (Commission from Tenant on Property Rented)</label>
-                            <input id="tenantRate" value="20" type="number" />
-                            <small>Commission rate in %</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="sellerRate">Your Commission Rate (Commission from Seller on Property Sold)</label>
-                            <input id="sellerRate" value="20" type="number" />
-                            <small>Commission rate in %</small>
-                        </div>
-                        <div class="inputField">
-                            <label for="buyerRate">Your Commission Rate (Commission from Buyer on Property Sold)</label>
-                            <input id="buyerRate" value="20" type="number" />
-                            <small>Commission rate in %</small>
-                        </div>
-                        <button class="btn-primary btn-lg long">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -161,21 +172,51 @@
 
            $("#experience , #about").change(function(){
                $(this).parent().siblings("button").css({
-                   visibility:"visible"
+                    display:"block"
                })
            })
 
            $("#mobile , #phone, #email, #whatsapp, #locality").change(function(){
                $(this).parent().siblings("button").css({
-                   visibility:"visible"
+                    display:"block"
                })
            })
 
            $("#registrationFee , #landlordRate, #buyerRate, #sellerRate, #tenantRate").change(function(){
                $(this).parent().siblings("button").css({
-                   visibility:"visible"
+                    display:"block"
                })
            })
+
+           $('#contact-information').on('click', function (e) {
+                e.preventDefault()
+                $(".tab-content #contact-information").addClass("show active").siblings("#agent-fees").removeClass("show active")
+            })
+
+            $('#agent-fees').on('click', function (e) {
+                e.preventDefault()
+                $(".tab-content #agent-fees").addClass("show active").siblings("#contact-information").removeClass("show active")
+            })
+
+            $('.personalInformationPane').hover(function(){
+                $('.personalInformationPane .edit').css({
+                    display:'flex'
+                })
+            }, function(){
+                $('.personalInformationPane .edit').css({
+                    display:'none'
+                })
+            })
+
+            $('.otherInformationPane').hover(function(){
+                $('.tab-pane .edit').css({
+                    display:'flex'
+                })
+            }, function(){
+                $('.tab-pane .edit').css({
+                    display:'none'
+                })
+            })
        })
     </script>
 </body>
