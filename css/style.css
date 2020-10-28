@@ -904,3 +904,185 @@ body {
 .page2 {
     display: none;
 }
+
+.leadsContainer {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px 10px;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    cursor: pointer;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.initial {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #262637;
+    color: #fff;
+    font-size: large;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leadsContainer .left img {
+    width: 35%;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.leadsContainer .left {
+    display: flex;
+    width: 35%;
+    border-right: 1px solid #262637;
+}
+
+.leadsContainer .left div {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.leadsContainer .left .leadsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.leadsContainer .right {
+    margin-left: 10px;
+    width: 75%;
+}
+
+.leadsContainer .right .top {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.leadsContainer .right .top .infowrap {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.leadsContainer .right .top .info {
+    margin-left: 5px;
+}
+
+.leadsContainer .right .mid {
+    margin-top: 10px;
+}
+
+.leadsContainer .right .mid .label {
+    font-size: smaller;
+}
+
+.leadsContainer .right .mid .message {
+    background-color: #dedefa;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.leadsContainer .right .mid .chatContainer {
+    display: none;
+    flex-direction: column;
+    background-color: #f6f7f8;
+    height: 15vh;
+    overflow: auto;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.leadsContainer .right .mid .chatContainer button {
+    background-color: #dedefa;
+    color: #fd5573;
+    width: fit-content;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.leadsContainer .right .mid .replyContainer {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.leadsContainer .right .mid .replyContainer .message {
+    background-color: #262637;
+    color: #fff;
+}
+
+.leadsContainer .right .mid P {
+    margin-bottom: 0;
+}
+
+.leadsContainer .right .bottom {
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+}
+
+.leadsContainer .right .bottom button {
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #262637;
+    color: #fff;
+    font-weight: bold;
+    font-size: smaller;
+    padding: 5px 8px;
+}
+
+.leadsContainer .right .bottom .inputWrapper {
+    position: relative;
+}
+
+.leadsContainer .right .bottom .inputWrapper button { 
+    position: absolute;
+    right: 5px;
+    bottom: 2.5px;
+    color: #fd5573;
+}
+
+.leadsContainer .right .bottom .inputWrapper input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #262637;
+    outline: none;
+    /* visibility: hidden; */
+}
+
+.leadsContainer .right .mid .clickToView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leadsContainer .right .mid .clickToView button {
+    background-color: #dedefa;
+    color: #fd5573;
+    border: none;
+    border-radius: 8px;
+}
+
+.leadsContainer .right .bottom .inputWrapper input:focus {
+    border: 2px solid #262637;
+}
