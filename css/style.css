@@ -692,7 +692,7 @@ body {
 }
 
 .listingsSearch {
-    width: 100%;
+    width: 70%;
     margin: 10px 0 0;
     height: 35px;
     border-radius: 8px;
@@ -991,6 +991,35 @@ body {
     padding: 5px 10px;
     border-radius: 8px;
     width: fit-content;
+}
+
+.searchWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchWrapper .refWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+    width: 30%;
+    margin-top: 10px;
+}
+
+.searchWrapper .refWrapper label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.searchWrapper .refWrapper input {
+    height: 35px;
+    border-radius: 8px;
+    border-color: #262637;
+    outline: none;
+    padding: 0 10px;
+    width: 100%;
 }
 
 .leadsContainer .right .mid .chatContainer {

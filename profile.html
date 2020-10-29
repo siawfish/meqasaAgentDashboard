@@ -36,7 +36,6 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="personalInformationPane">
-                            <button class="btn-primary btn-sm edit">edit</button>
                             <div class="section">
                                 <div class="avatarContainer">
                                     <div class="avatarWrapper">
@@ -70,7 +69,6 @@
                         </ul>
                         <div class="tab-content otherInformationPane">
                             <div class="tab-pane fade show active" id="contact-information" role="tabpanel" aria-labelledby="contact-information">
-                                <button class="btn-primary btn-sm edit">edit</button>
                                 <div class="section">
                                     <div class="inputField">
                                         <label for="mobile">Mobile Phone Number</label>
@@ -99,7 +97,6 @@
                                 </div> 
                             </div>
                             <div class="tab-pane fade" id="agent-fees" role="tabpanel" aria-labelledby="agent-fees">
-                                <button class="btn btn-primary btn-sm edit">edit</button>
                                 <div class="section">
                                     <div class="inputField">
                                         <label for="registrationFee">Your Registration Fee</label>
@@ -206,16 +203,6 @@
                 })
             }, function(){
                 $('.personalInformationPane .edit').css({
-                    display:'none'
-                })
-            })
-
-            $('.otherInformationPane').hover(function(){
-                $('.tab-pane .edit').css({
-                    display:'flex'
-                })
-            }, function(){
-                $('.tab-pane .edit').css({
                     display:'none'
                 })
             })
