@@ -23,7 +23,7 @@
                 <a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
                 <a class="active" href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
                 <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
-                <a href="#"><i class="fa fa-bolt"></i><span>Bumps</span></a>
+                <a href="bumps.html"><i class="fa fa-bolt"></i><span>Bumps</span></a>
                 <a href="#"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
                 <a href="#"><i class="fa fa-trophy"></i><span>Premiums</span></a>
                 <a href="#"><i class="fa fa-diamond"></i><span>Premium+</span></a>
@@ -345,7 +345,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade show active" style="padding-top: 10px;" id="all-listings" role="tabpanel" aria-labelledby="all-listings">
-                            <div class="container noMargin scrollContainer">
+                            <div class="container noMargin">
     
                                 <div class="listingContainer">
                                     <div class="showWrapper">
@@ -585,13 +585,15 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                
     
                                 <!-- End of scroll container -->
                             </div>
                         </div>
     
                         <div class="tab-pane fade" style="padding-top: 10px;" id="active-listings" role="tabpanel" aria-labelledby="active-listings">
-                            <div class="container noMargin scrollContainer">
+                            <div class="container noMargin">
                                 <div class="listingContainer">
                                     <div class="showWrapper">
                                         <div class="leftRightWrap">
@@ -714,7 +716,7 @@
                         </div>
     
                         <div class="tab-pane fade" style="padding-top: 10px;" id="pending-listings" role="tabpanel" aria-labelledby="pending-listings">
-                            <div class="container noMargin scrollContainer">
+                            <div class="container noMargin">
                                 
                                 <div class="listingContainer">
                                     <div class="showWrapper">
@@ -888,7 +890,7 @@
 
             $(".listingsSearch").on("keyup", function() {
                 var value = $(this).val().toLowerCase()
-                $(".scrollContainer .listingContainer").filter(function() {
+                $(".noMargin .listingContainer").filter(function() {
                     $(this).toggle($(this).children().text().toLowerCase().indexOf(value) > -1)
                 })
             })

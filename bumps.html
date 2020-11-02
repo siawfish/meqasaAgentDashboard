@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Agent Bumps</title>
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Bumps</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="icon-bar">
+                <a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a>
+                <a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
+                <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
+                <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
+                <a class="active" href="bumps.html"><i class="fa fa-bolt"></i><span>Bumps</span></a>
+                <a href="#"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
+                <a href="#"><i class="fa fa-trophy"></i><span>Premiums</span></a>
+                <a href="#"><i class="fa fa-diamond"></i><span>Premium+</span></a>
+                <a href="#"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
+                <a href="#"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
+            </div>
+            <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="all-leads" data-toggle="tab" role="tab" aria-controls="all-leads" aria-selected="true" href="#all-leads">Active Bumps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="message-leads" data-toggle="tab" role="tab" aria-controls="message-leads" aria-selected="true" href="#message-leads">Scheduled Bumps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="phone-leads" data-toggle="tab" role="tab" aria-controls="phone-leads" aria-selected="true" href="#phone-leads">All Bumps</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="all-leads" role="tabpanel" aria-labelledby="all-leads">
+                        <div class="container noMargin">
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="message-leads" role="tabpanel" aria-labelledby="message-leads">
+                        <div class="container noMargin">
+                           
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="phone-leads" role="tabpanel" aria-labelledby="phone-leads">
+                        <div class="container noMargin">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $('.icon-bar').hover(function(){
+        $(this).css({
+            width:220
+        })
+        $('.icon-bar span').css({
+            display:'inline'
+        })
+        $('.icon-bar a').css({
+            textAlign:'left'
+        })
+    }, function(){
+        $(this).css({
+            width:70
+        })
+        $('.icon-bar span').css({
+            display:'none'
+        })
+        $('.icon-bar a').css({
+            textAlign:'center'
+        })
+    })
+
+    $(".clickToView button").click(function(){
+        $(this).parent(".clickToView").fadeOut('slow')
+        $(this).parent(".clickToView").next(".chatContainer").css({
+            display:"flex"
+        })
+        $(this).parent(".clickToView").parent(".mid").next().fadeIn('slow')
+    })
+
+    $(".chatContainer").hover(function(){
+        $(this).children('button').show('slow')
+    }, function(){
+        $(this).children('button').hide('slow')
+    })
+
+    $(".chatContainer button").click(function(){
+        $(this).parent(".chatContainer").siblings('.clickToView').show()
+        $(this).parent(".chatContainer").css({
+            display:"none"
+        })
+        $(this).parent(".chatContainer").parent(".mid").next().hide()
+    })
+
+    $('#all-leads').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #all-leads").addClass("show active").siblings().removeClass("show active")
+    })
+
+    $('#message-leads').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #message-leads").addClass("show active").siblings().removeClass("show active")
+    })
+
+    $('#phone-leads').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #phone-leads").addClass("show active").siblings().removeClass("show active")
+    })
+</script>
+</html>

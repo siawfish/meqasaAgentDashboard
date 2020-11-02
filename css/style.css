@@ -252,9 +252,9 @@ body {
 .icon-bar {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
-    position: absolute;
+    position: sticky;
+    margin-top: 5%;
     height: fit-content;
-    top: 15%;
     z-index: 1;
     -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
     -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
@@ -620,10 +620,6 @@ body {
 }
 
 .addListingsWrapper {
-    height: 85%;
-    overflow: hidden;
-    overflow-y: auto;
-    position: sticky;
     padding: 0 30px;
     display: none;
 }
@@ -631,12 +627,6 @@ body {
 .label {
     font-weight: bolder;
     text-align: left;
-}
-
-.scrollContainer {
-    height: 75%;
-    overflow: auto;
-    position: fixed;
 }
 
 .colListingRow {
