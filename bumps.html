@@ -35,8 +35,8 @@
                     <div class="btn-group">
                         <button type="button" id="bump" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bolt" aria-hidden="true"></i> Activate Bump</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-item" type="button"><i class="fa fa-bolt" aria-hidden="true"></i> Bump Now</div>
-                            <div class="dropdown-item" type="button"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Bump</div>
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#bumpNow"><i class="fa fa-bolt" aria-hidden="true"></i> Bump Now</div>
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#scheduleBump"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Bump</div>
                         </div>
                     </div>
                     <small>You have <span>10</span> bumps remaining</small>
@@ -220,6 +220,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bump Now Modal -->
+    <div class="modal fade" id="bumpNow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Schedule Bump Modal -->
+    <div class="modal fade" id="scheduleBump" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
