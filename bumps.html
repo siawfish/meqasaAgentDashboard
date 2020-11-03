@@ -13,7 +13,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">My Bumps</li>
+            <li class="breadcrumb-item active" aria-current="page">Bumps</li>
         </ol>
     </nav>
     <div class="container-fluid">
@@ -24,38 +24,200 @@
                 <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
                 <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
                 <a class="active" href="bumps.html"><i class="fa fa-bolt"></i><span>Bumps</span></a>
-                <a href="#"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
-                <a href="#"><i class="fa fa-trophy"></i><span>Premiums</span></a>
-                <a href="#"><i class="fa fa-diamond"></i><span>Premium+</span></a>
+                <a href="topAds.html"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
+                <a href="premium.html"><i class="fa fa-trophy"></i><span>Premiums</span></a>
+                <a href="premiumPlus.html"><i class="fa fa-diamond"></i><span>Premium+</span></a>
                 <a href="#"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
                 <a href="#"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
             </div>
             <div class="container">
+                <div class="activateContainer">
+                    <div class="btn-group">
+                        <button type="button" id="bump" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bolt" aria-hidden="true"></i> Activate Bump</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item" type="button"><i class="fa fa-bolt" aria-hidden="true"></i> Bump Now</div>
+                            <div class="dropdown-item" type="button"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Bump</div>
+                        </div>
+                    </div>
+                    <small>You have <span>10</span> bumps remaining</small>
+                </div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="all-leads" data-toggle="tab" role="tab" aria-controls="all-leads" aria-selected="true" href="#all-leads">Active Bumps</a>
+                        <a class="nav-link active" id="active-bumps" href="#active-bumps" data-toggle="tab" role="tab" aria-controls="active-bumps" aria-selected="true">Active Bumps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="message-leads" data-toggle="tab" role="tab" aria-controls="message-leads" aria-selected="true" href="#message-leads">Scheduled Bumps</a>
+                        <a class="nav-link" id="scheduled-bumps" href="#scheduled-bumps" data-toggle="tab" role="tab" aria-controls="scheduled-bumps" aria-selected="true">Scheduled Bumps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="phone-leads" data-toggle="tab" role="tab" aria-controls="phone-leads" aria-selected="true" href="#phone-leads">All Bumps</a>
+                        <a class="nav-link" id="all-bumps" href="#all-bumps" data-toggle="tab" role="tab" aria-controls="all-bumps" aria-selected="true">All Bumps</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="all-leads" role="tabpanel" aria-labelledby="all-leads">
+                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="active-bumps" role="tabpanel" aria-labelledby="active-bumps">
                         <div class="container noMargin">
+
+                            <div class="bumpsWrapper">
+                                <div class="left">
+                                    <img src="img/house.jpeg" alt="">
+                                    <div class="bumpInfoWrapper">
+                                        <span class="title">3 bedroom guest house for sale at Achimota </span>
+                                        <span class="amentiesRow">
+                                            <span>
+                                                <i class="fa fa-bed" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-shower" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-car" aria-hidden="true"></i> 4
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        <span>₵150,000</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <small>Activated on: 20.10.10 at 11:20</small>
+                                    <div class="statsWrapper">
+                                        <div class="stat">
+                                            <small>Views</small>
+                                            30
+                                        </div>
+                                        <div class="stat">
+                                            <small>Phone</small>
+                                            50
+                                        </div>
+                                        <div class="stat">
+                                            <small>Messages</small>
+                                            18
+                                        </div>
+                                    </div>
+                                    <small>Expires on: 31.10.10 at 11:20</small>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-                    <div class="tab-pane fade" style="padding-top: 10px;" id="message-leads" role="tabpanel" aria-labelledby="message-leads">
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="scheduled-bumps" role="tabpanel" aria-labelledby="scheduled-bumps">
                         <div class="container noMargin">
-                           
+                            <div class="bumpsWrapper">
+                                <div class="left">
+                                    <img src="img/house.jpeg" alt="">
+                                    <div class="bumpInfoWrapper">
+                                        <span class="title">3 bedroom guest house for sale at Achimota </span>
+                                        <span class="amentiesRow">
+                                            <span>
+                                                <i class="fa fa-bed" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-shower" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-car" aria-hidden="true"></i> 4
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        <span>₵150,000</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="scheduleWrapper">
+                                        <small>Scheduled for:</small>
+                                        <div class="schedule">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i> Nov 3 - Nov 7, 2020 at 09:00 AM
+                                        </div>
+                                    </div>
+                                    <div class="actionBtnsWrapper">
+                                        <button><i class="fa fa-bolt" aria-hidden="true"></i> Bump now</button>
+                                        <button><i class="fa fa-clock-o" aria-hidden="true"></i> Reschedule</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" style="padding-top: 10px;" id="phone-leads" role="tabpanel" aria-labelledby="phone-leads">
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="all-bumps" role="tabpanel" aria-labelledby="all-bumps">
                         <div class="container noMargin">
-                           
+                            <div class="bumpsWrapper">
+                                <div class="left">
+                                    <img src="img/house.jpeg" alt="">
+                                    <div class="bumpInfoWrapper">
+                                        <span class="title">3 bedroom guest house for sale at Achimota </span>
+                                        <span class="amentiesRow">
+                                            <span>
+                                                <i class="fa fa-bed" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-shower" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-car" aria-hidden="true"></i> 4
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        <span>₵150,000</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <small>Activated on: 20.10.10 at 11:20</small>
+                                    <div class="statsWrapper">
+                                        <div class="stat">
+                                            <small>Views</small>
+                                            30
+                                        </div>
+                                        <div class="stat">
+                                            <small>Phone</small>
+                                            50
+                                        </div>
+                                        <div class="stat">
+                                            <small>Messages</small>
+                                            18
+                                        </div>
+                                    </div>
+                                    <small>Expires on: 31.10.10 at 11:20</small>
+                                </div>
+                            </div>
+
+                            <div class="bumpsWrapper">
+                                <div class="left">
+                                    <img src="img/house.jpeg" alt="">
+                                    <div class="bumpInfoWrapper">
+                                        <span class="title">3 bedroom guest house for sale at Achimota </span>
+                                        <span class="amentiesRow">
+                                            <span>
+                                                <i class="fa fa-bed" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-shower" aria-hidden="true"></i> 3
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-car" aria-hidden="true"></i> 4
+                                            </span>
+                                            <span>
+                                                <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        <span>₵150,000</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="scheduleWrapper">
+                                        <small>Scheduled for:</small>
+                                        <div class="schedule">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i> Nov 3 - Nov 7, 2020 at 09:00 AM
+                                        </div>
+                                    </div>
+                                    <div class="actionBtnsWrapper">
+                                        <button><i class="fa fa-bolt" aria-hidden="true"></i> Bump now</button>
+                                        <button><i class="fa fa-clock-o" aria-hidden="true"></i> Reschedule</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,41 +251,25 @@
         })
     })
 
-    $(".clickToView button").click(function(){
-        $(this).parent(".clickToView").fadeOut('slow')
-        $(this).parent(".clickToView").next(".chatContainer").css({
-            display:"flex"
-        })
-        $(this).parent(".clickToView").parent(".mid").next().fadeIn('slow')
+    $('#bump').click(function(){
+        if($('.dropdown-menu').is(":visible")){
+            $('.dropdown-menu').slideUp('slow')
+        } else $('.dropdown-menu').slideDown('slow')
     })
-
-    $(".chatContainer").hover(function(){
-        $(this).children('button').show('slow')
-    }, function(){
-        $(this).children('button').hide('slow')
-    })
-
-    $(".chatContainer button").click(function(){
-        $(this).parent(".chatContainer").siblings('.clickToView').show()
-        $(this).parent(".chatContainer").css({
-            display:"none"
-        })
-        $(this).parent(".chatContainer").parent(".mid").next().hide()
-    })
-
-    $('#all-leads').on('click', function (e) {
+    
+    $('#active-bumps').on('click', function (e) {
         e.preventDefault()
-        $(".tab-content #all-leads").addClass("show active").siblings().removeClass("show active")
+        $(".tab-content #active-bumps").addClass("show active").siblings().removeClass("show active")
     })
 
-    $('#message-leads').on('click', function (e) {
+    $('#scheduled-bumps').on('click', function (e) {
         e.preventDefault()
-        $(".tab-content #message-leads").addClass("show active").siblings().removeClass("show active")
+        $(".tab-content #scheduled-bumps").addClass("show active").siblings().removeClass("show active")
     })
 
-    $('#phone-leads').on('click', function (e) {
+    $('#all-bumps').on('click', function (e) {
         e.preventDefault()
-        $(".tab-content #phone-leads").addClass("show active").siblings().removeClass("show active")
+        $(".tab-content #all-bumps").addClass("show active").siblings().removeClass("show active")
     })
 </script>
 </html>

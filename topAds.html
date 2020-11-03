@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Agent Top Ads</title>
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Top Ads</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="icon-bar">
+                <a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a>
+                <a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
+                <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
+                <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
+                <a href="bumps.html"><i class="fa fa-bolt"></i><span>Bumps</span></a>
+                <a class="active" href="topAds.html"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
+                <a href="premium.html"><i class="fa fa-trophy"></i><span>Premiums</span></a>
+                <a href="premiumPlus.html"><i class="fa fa-diamond"></i><span>Premium+</span></a>
+                <a href="#"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
+                <a href="#"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
+            </div>
+            <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="active-topAds" data-toggle="tab" role="tab" aria-controls="active-topAds" aria-selected="true">Active Top Ads</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="active-topAds" role="tabpanel" aria-labelledby="active-topAds">
+                        <div class="container noMargin">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $('.icon-bar').hover(function(){
+        $(this).css({
+            width:220
+        })
+        $('.icon-bar span').css({
+            display:'inline'
+        })
+        $('.icon-bar a').css({
+            textAlign:'left'
+        })
+    }, function(){
+        $(this).css({
+            width:70
+        })
+        $('.icon-bar span').css({
+            display:'none'
+        })
+        $('.icon-bar a').css({
+            textAlign:'center'
+        })
+    })
+
+    $('#active-topAds').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #active-topAds").addClass("show active").siblings().removeClass("show active")
+    })
+</script>
+</html>

@@ -1105,3 +1105,155 @@ body {
 .leadsContainer .right .bottom .inputWrapper input:focus {
     border: 2px solid #262637;
 }
+
+.bumpsWrapper {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px 10px;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    cursor: pointer;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.bumpsWrapper .left img {
+    width: 30%;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.bumpsWrapper .left {
+    display: flex;
+    width: 50%;
+}
+
+.bumpsWrapper .left div {
+    font-weight: bold;
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bumpsWrapper .left .bumpInfoWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.bumpsWrapper .left .bumpInfoWrapper .title {
+    font-size: 15px;
+}
+
+.amentiesRow span {
+    margin-right: 10px;
+}
+
+.amentiesRow span i {
+    color: #fd5573;
+    font-size: larger;
+}
+
+.amentiesRow {
+    margin-top: 5px;
+}
+
+.bumpsWrapper .right {
+    margin-left: 10px;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bumpsWrapper .right .statsWrapper {
+    display: flex;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.bumpsWrapper .right .statsWrapper .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    background-color: #dedefa;
+    padding: 5px;
+    border-radius: 8px;
+    width: 70px;
+    height: 50px;
+}
+
+.bumpsWrapper .right .scheduleWrapper {
+    background-color: #dedefa;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.bumpsWrapper .right .scheduleWrapper i {
+    color: #fd5573;
+}
+
+.bumpsWrapper .right .actionBtnsWrapper button {
+    border: none;
+    background-color: #262637;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+.bumpsWrapper .right .actionBtnsWrapper button i {
+    color: #fd5573;
+}
+
+.activateContainer {
+    position: absolute;
+    top: 7%;
+    right:17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activateContainer button {
+    background-color: #fd5573;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: larger;
+    padding: 5px 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: none!important;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+}
+
+.activateContainer button:hover {
+    transform: scale(1.05)
+}
+
+.activateContainer button i {
+    color: #262637;
+    font-size: xx-large;
+    margin-right: 5px;
+}
+
+.activateContainer small {
+    padding: 3px 0;
+}
+
+.activateContainer small span {
+    color: #fd5573;
+    font-size: 15px;
+}
