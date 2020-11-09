@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Agent Bumps</title>
 </head>
@@ -35,8 +36,8 @@
                     <div class="btn-group">
                         <button type="button" id="activate" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bolt" aria-hidden="true"></i> Activate Bump</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#bumpNow"><i class="fa fa-bolt" aria-hidden="true"></i> Bump Now</div>
-                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#bumpNow"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Bump</div>
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#bumpNow" data-type="now"><i class="fa fa-bolt" aria-hidden="true"></i> Bump Now</div>
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#bumpNow" data-type="schedule"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Bump</div>
                         </div>
                     </div>
                     <small>You have <span>17</span> bumps remaining</small>
@@ -237,6 +238,25 @@
                                 <div class="bump">bumps</div>
                             </div>
                         </div>
+
+                        <div style="margin-top: 10px; display: none;" class="scheduleRow row">
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="duration">Schedule between *</label>
+                                    <input type="text" name="daterange" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputField">
+                                    <label class="containerContainer">Prefered time?
+                                        <input id="setTime" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <input disabled class="timepicker"/>
+                                </div>
+                            </div>
+                        </div>
+
                         <input id="search" placeholder="Search listings by Keyword / Price / Ref / Location" class="search" type="text">
                         <div class="selectionWrapper">
 
@@ -280,222 +300,159 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <small>Updated on: 31.10.10 at 11:20</small>
-                            </div>
-                        </div>
-                        <div class="bumpsWrapper">
-                            <div class="left">
-                                <img src="img/house.jpeg" alt="">
-                                <div class="bumpInfoWrapper">
-                                    <span class="title">3 bedroom guest house for sale at Achimota </span>
-                                    <span class="amentiesRow">
-                                        <span>
-                                            <i class="fa fa-bed" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-shower" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-car" aria-hidden="true"></i> 4
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
-                                        </span>
-                                    </span>
-                                    <span>₵150,000</span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="checkboxField">
-                                    <label class="containerContainer">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
+                                <div class="scheduleWrapper">
+                                    <input class="timepicker"/>
                                 </div>
                                 <small>Updated on: 31.10.10 at 11:20</small>
                             </div>
                         </div>
-                        <div class="bumpsWrapper">
-                            <div class="left">
-                                <img src="img/house.jpeg" alt="">
-                                <div class="bumpInfoWrapper">
-                                    <span class="title">3 bedroom guest house for sale at Achimota </span>
-                                    <span class="amentiesRow">
-                                        <span>
-                                            <i class="fa fa-bed" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-shower" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-car" aria-hidden="true"></i> 4
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
-                                        </span>
-                                    </span>
-                                    <span>₵150,000</span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="checkboxField">
-                                    <label class="containerContainer">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <small>Updated on: 31.10.10 at 11:20</small>
-                            </div>
-                        </div>
-                        <div class="bumpsWrapper">
-                            <div class="left">
-                                <img src="img/house.jpeg" alt="">
-                                <div class="bumpInfoWrapper">
-                                    <span class="title">3 bedroom guest house for sale at Achimota </span>
-                                    <span class="amentiesRow">
-                                        <span>
-                                            <i class="fa fa-bed" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-shower" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-car" aria-hidden="true"></i> 4
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
-                                        </span>
-                                    </span>
-                                    <span>₵120,000</span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="checkboxField">
-                                    <label class="containerContainer">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <small>Updated on: 31.10.10 at 11:20</small>
-                            </div>
-                        </div>
-                        <div class="bumpsWrapper">
-                            <div class="left">
-                                <img src="img/house.jpeg" alt="">
-                                <div class="bumpInfoWrapper">
-                                    <span class="title">3 bedroom guest house for sale at Achimota </span>
-                                    <span class="amentiesRow">
-                                        <span>
-                                            <i class="fa fa-bed" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-shower" aria-hidden="true"></i> 3
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-car" aria-hidden="true"></i> 4
-                                        </span>
-                                        <span>
-                                            <i class="fa fa-th-large" aria-hidden="true"></i> 290 m<sup>2</sup>
-                                        </span>
-                                    </span>
-                                    <span>₵150,000</span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="checkboxField">
-                                    <label class="containerContainer">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <small>Updated on: 31.10.10 at 11:20</small>
-                            </div>
-                        </div>
-
                     </div>
                     <button id="save"><i class="fa fa-bolt" aria-hidden="true"></i> Activate</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $('.icon-bar').hover(function(){
+            $(this).css({
+                width:220
+            })
+            $('.icon-bar span').css({
+                display:'inline'
+            })
+            $('.icon-bar a').css({
+                textAlign:'left'
+            })
+        }, function(){
+            $(this).css({
+                width:70
+            })
+            $('.icon-bar span').css({
+                display:'none'
+            })
+            $('.icon-bar a').css({
+                textAlign:'center'
+            })
+        })
+
+        $('#activate').click(function(){
+            if($('.dropdown-menu').is(":visible")){
+                $('.dropdown-menu').slideUp('slow')
+            } else $('.dropdown-menu').slideDown('slow')
+        })
+        
+        $('#bumpNow').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var type = button.data('type') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            if(type==="schedule"){
+                $(".scheduleRow").show()
+            } else $(".scheduleRow").hide()
+        })
+        
+        $('#active-bumps').on('click', function (e) {
+            e.preventDefault()
+            $(".tab-content #active-bumps").addClass("show active").siblings().removeClass("show active")
+        })
+
+        $('#scheduled-bumps').on('click', function (e) {
+            e.preventDefault()
+            $(".tab-content #scheduled-bumps").addClass("show active").siblings().removeClass("show active")
+        })
+
+        $('#all-bumps').on('click', function (e) {
+            e.preventDefault()
+            $(".tab-content #all-bumps").addClass("show active").siblings().removeClass("show active")
+        })
+
+        $(".heading #search").on("keyup", function(){
+            var value = $(this).val().toLowerCase()
+            $(".listingsWrapper .bumpsWrapper").filter(function() {
+                $(this).toggle($(this).children().text().toLowerCase().indexOf(value) > -1)
+            })
+            if($(this).val()!==""){
+                $(".heading span").html("Search results")
+            } else {
+                $(".heading span").html("Recent listings")
+            }
+        })
+
+        $(".bumpsWrapper .right input[type=checkbox]").click(function(){
+            if($(this).prop("checked")){
+                $(".selectionWrapper .selection").show("slow")
+                $("#save").show("slow")
+                if($("#setTime").prop("checked")){
+                    $(this).parents(".checkboxField").siblings(".scheduleWrapper").css({
+                        display:"block"
+                    })
+                }
+            } else {
+                $(".selectionWrapper .selection").hide("slow")
+                $(this).parents(".checkboxField").siblings(".scheduleWrapper").css({
+                    display:"none"
+                })
+                $("#save").hide("slow")
+            }
+        })
+
+        $('.timepicker').timepicker({
+            timeFormat: 'h:mm p',
+            interval: 60,
+            defaultTime: '6',
+            startTime: '6',
+            minTime: '6',
+            maxTime: '18',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true,
+            zindex:9999999
+        })
+
+        $(function() {
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'right',
+                startDate: moment().startOf('day'),
+                endDate: moment().startOf('day').add(14, 'day'),
+                locale: {
+                    format: 'DD/MM/YYYY'
+                }
+            }, function(start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+        });
+
+        $("#setTime").click(function(){
+            if($(".timepicker").prop("disabled")){
+                $(".timepicker").prop("disabled", false)
+                $('.checkboxField input:checked').parents(".checkboxField").siblings(".scheduleWrapper").css({
+                    display:"block"
+                })
+            } else {
+                $(".timepicker").prop("disabled", true)
+                $("#bumpNow .scheduleWrapper").css({
+                    display:"none"
+                })
+            }
+        })
+
+        $(".selectionWrapper .selection img").hover(function(){
+            $(this).siblings().css({
+                visibility:"visible"
+            })
+        }, function(){
+            $(this).siblings().css({
+                visibility:"hidden"
+            })
+        })
+    </script>
 </body>
-<script src="js/jquery-3.5.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script>
-    $('.icon-bar').hover(function(){
-        $(this).css({
-            width:220
-        })
-        $('.icon-bar span').css({
-            display:'inline'
-        })
-        $('.icon-bar a').css({
-            textAlign:'left'
-        })
-    }, function(){
-        $(this).css({
-            width:70
-        })
-        $('.icon-bar span').css({
-            display:'none'
-        })
-        $('.icon-bar a').css({
-            textAlign:'center'
-        })
-    })
-
-    $('#activate').click(function(){
-        if($('.dropdown-menu').is(":visible")){
-            $('.dropdown-menu').slideUp('slow')
-        } else $('.dropdown-menu').slideDown('slow')
-    })
-    
-    $('#active-bumps').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #active-bumps").addClass("show active").siblings().removeClass("show active")
-    })
-
-    $('#scheduled-bumps').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #scheduled-bumps").addClass("show active").siblings().removeClass("show active")
-    })
-
-    $('#all-bumps').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #all-bumps").addClass("show active").siblings().removeClass("show active")
-    })
-
-    $(".heading #search").on("keyup", function(){
-        var value = $(this).val().toLowerCase()
-        $(".listingsWrapper .bumpsWrapper").filter(function() {
-            $(this).toggle($(this).children().text().toLowerCase().indexOf(value) > -1)
-        })
-        if($(this).val()!==""){
-            $(".heading span").html("Search results")
-        } else {
-            $(".heading span").html("Recent listings")
-        }
-    })
-
-    $(".bumpsWrapper .right input[type=checkbox]").click(function(){
-        if($(this).prop("checked")){
-            $(".selectionWrapper .selection").show("slow")
-            $("#save").show("slow")
-        } else {
-            $(".selectionWrapper .selection").hide("slow")
-            $("#save").hide("slow")
-        }
-    })
-
-    $(".selectionWrapper .selection img").hover(function(){
-        $(this).siblings().css({
-            visibility:"visible"
-        })
-    }, function(){
-        $(this).siblings().css({
-            visibility:"hidden"
-        })
-    })
-</script>
 </html>

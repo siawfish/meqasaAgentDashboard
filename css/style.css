@@ -252,7 +252,7 @@ body {
 .icon-bar {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
-    position: sticky;
+    position: fixed;
     margin-top: 5%;
     height: fit-content;
     z-index: 1;
@@ -788,6 +788,14 @@ body {
     background-color: #dedefa;
     border-radius: 8px;
 }
+
+.heading .checkmark {
+    background-color: #f6f7f8;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #262637!important;
+}
   
   /* On mouse-over, add a grey background color */
 .containerContainer:hover input ~ .checkmark {
@@ -1125,6 +1133,10 @@ body {
     font-weight: bold;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #fd5573;
+}
+
 .bumpsWrapper .right .statsWrapper .stat {
     display: flex;
     flex-direction: column;
@@ -1352,4 +1364,18 @@ body {
     font-weight: bold;
     padding: 10px;
     display: none;
+}
+
+.modal-body .bumpsWrapper .right .scheduleWrapper {
+    margin-top: 10px;
+    width: 60%;
+    display: none;
+}
+
+.modal-body .bumpsWrapper .right .scheduleWrapper input {
+    border-radius: 8px;
+    border: none;
+    padding: 3px 8px;
+    text-align: right;
+    width: 100%;
 }
