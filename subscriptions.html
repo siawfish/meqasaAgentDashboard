@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Agent Subscriptions</title>
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Subscriptions</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="icon-bar">
+                <a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a>
+                <a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
+                <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
+                <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
+                <a href="bumps.html"><i class="fa fa-bolt"></i><span>Bumps</span></a>
+                <a href="topAds.html"><i class="fa fa-certificate"></i><span>Top Ads</span></a>
+                <a href="premium.html"><i class="fa fa-trophy"></i><span>Premiums</span></a>
+                <a href="premiumPlus.html"><i class="fa fa-diamond"></i><span>Premium+</span></a>
+                <a href="#"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
+                <a href="subscriptions.html" class="active" ><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
+            </div>
+            <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="overview" href="#overview" data-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="plans" href="#plans" data-toggle="tab" role="tab" aria-controls="plans" aria-selected="true">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="invoices" href="#invoices" data-toggle="tab" role="tab" aria-controls="invoices" aria-selected="true">Invoices</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="overview" role="tabpanel" aria-labelledby="overview">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-12 col-xs-12">
+
+                                <div class="planCard">
+                                    <div class="topRow">
+                                        <div class="plan">
+                                            <span class="planDuration">4 Months</span>
+                                            Plan
+                                        </div>
+                                        <div class="price">
+                                            &#8373; 1,350.00
+                                        </div>
+                                    </div>
+                                    <div class="bottomRow">
+                                        <div class="statsWrapper">
+                                            <div class="stat">
+                                                <i class="fa fa-bolt"></i>
+                                            </div>
+                                            <span>70</span>
+                                            <div class="stat">
+                                                <i class="fa fa-certificate"></i>
+                                            </div>
+                                            <span>13</span>
+                                            <div class="stat">
+                                                <i class="fa fa-trophy"></i>
+                                            </div>
+                                            <span>4</span>
+                                            <div class="stat">
+                                                <i class="fa fa-diamond"></i>
+                                            </div>
+                                            <span>3</span>
+                                        </div>
+                                        <button>Upgrade plan <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 col-sm-12 col-xs-12">
+                                <div class="expireCard">
+                                    <div class="topRow">
+                                        <div>Expires</div>
+                                        <div class="expireDate">on November 30, 2020</div>
+                                    </div>
+                                    <div class="bottomRow">
+                                        <button>Manage Payments</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="padding-top: 20px;" class="row">
+                            <div style="margin-bottom: 10px; font-weight: bold; color: #fd5573;" class="col-12">INVOICES (12)</div>
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="plans" role="tabpanel" aria-labelledby="plans">
+                        <div class="container noMargin">
+
+                            <div id="generic_price_table">   
+                                <section>                                        
+                                    <!--BLOCK ROW START-->
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                        
+                                            <!--PRICE CONTENT START-->
+                                            <div class="generic_content clearfix">
+                                                
+                                                <!--HEAD PRICE DETAIL START-->
+                                                <div class="generic_head_price clearfix">
+                                                
+                                                    <!--HEAD CONTENT START-->
+                                                    <div class="generic_head_content clearfix">
+                                                    
+                                                    <!--HEAD START-->
+                                                        <div class="head_bg"></div>
+                                                        <div class="head">
+                                                            <span>3 Months</span>
+                                                        </div>
+                                                        <!--//HEAD END-->
+                                                        
+                                                    </div>
+                                                    <!--//HEAD CONTENT END-->
+                                                    
+                                                    <!--PRICE START-->
+                                                    <div class="generic_price_tag clearfix">
+                                                        <span class="price">
+                                                            <span class="sign">&#8373;</span>
+                                                            <span class="currency">495</span>
+                                                            <span class="cent">.00</span>
+                                                        </span>
+                                                    </div>
+                                                    <!--//PRICE END-->
+                                                    
+                                                </div>                            
+                                                <!--//HEAD PRICE DETAIL END-->
+                                                
+                                                <!--FEATURE LIST START-->
+                                                <div class="generic_feature_list">
+                                                    <ul>
+                                                        <li><span>50GB</span> Bumps</li>
+                                                        <li><span>2</span> Top Ad</li>
+                                                        <li><span>1</span> Premium</li>
+                                                        <li><span>-</span> Premium plus</li>
+                                                    </ul>
+                                                </div>
+                                                <!--//FEATURE LIST END-->
+                                                
+                                                <!--BUTTON START-->
+                                                <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Purchase</a>
+                                                </div>
+                                                <!--//BUTTON END-->
+                                                
+                                            </div>
+                                            <!--//PRICE CONTENT END-->
+                                                
+                                        </div>
+                                        
+                                        <div class="col-md-3">
+                                        
+                                            <!--PRICE CONTENT START-->
+                                            <div class="generic_content active clearfix">
+                                                
+                                                <!--HEAD PRICE DETAIL START-->
+                                                <div class="generic_head_price clearfix">
+                                                
+                                                    <!--HEAD CONTENT START-->
+                                                    <div class="generic_head_content clearfix">
+                                                    
+                                                    <!--HEAD START-->
+                                                        <div class="head_bg"></div>
+                                                        <div class="head">
+                                                            <span>4 Months</span>
+                                                        </div>
+                                                        <!--//HEAD END-->
+                                                        
+                                                    </div>
+                                                    <!--//HEAD CONTENT END-->
+                                                    
+                                                    <!--PRICE START-->
+                                                    <div class="generic_price_tag clearfix">
+                                                        <span class="price">
+                                                            <span class="sign">&#8373;</span>
+                                                            <span class="currency">1350</span>
+                                                            <span class="cent">.00</span>
+                                                        </span>
+                                                    </div>
+                                                    <!--//PRICE END-->
+                                                    
+                                                </div>                            
+                                                <!--//HEAD PRICE DETAIL END-->
+                                                
+                                                <!--FEATURE LIST START-->
+                                                <div class="generic_feature_list">
+                                                    <ul>
+                                                        <li><span>70</span> Bumps</li>
+                                                        <li><span>7</span> Top Ad</li>
+                                                        <li><span>3</span> Premium</li>
+                                                        <li><span>-</span> Premium plus</li>
+                                                    </ul>
+                                                </div>
+                                                <!--//FEATURE LIST END-->
+                                                
+                                                <!--BUTTON START-->
+                                                <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Purchase</a>
+                                                </div>
+                                                <!--//BUTTON END-->
+                                                
+                                            </div>
+                                            <!--//PRICE CONTENT END-->
+                                                
+                                        </div>
+                                        <div class="col-md-3">
+                                        
+                                            <!--PRICE CONTENT START-->
+                                            <div class="generic_content clearfix">
+                                                
+                                                <!--HEAD PRICE DETAIL START-->
+                                                <div class="generic_head_price clearfix">
+                                                
+                                                    <!--HEAD CONTENT START-->
+                                                    <div class="generic_head_content clearfix">
+                                                    
+                                                    <!--HEAD START-->
+                                                        <div class="head_bg"></div>
+                                                        <div class="head">
+                                                            <span>6 Months</span>
+                                                        </div>
+                                                        <!--//HEAD END-->
+                                                        
+                                                    </div>
+                                                    <!--//HEAD CONTENT END-->
+                                                    
+                                                    <!--PRICE START-->
+                                                    <div class="generic_price_tag clearfix">
+                                                        <span class="price">
+                                                            <span class="sign">&#8373;</span>
+                                                            <span class="currency">3350</span>
+                                                            <span class="cent">.00</span>
+                                                        </span>
+                                                    </div>
+                                                    <!--//PRICE END-->
+                                                    
+                                                </div>                            
+                                                <!--//HEAD PRICE DETAIL END-->
+                                                
+                                                <!--FEATURE LIST START-->
+                                                <div class="generic_feature_list">
+                                                    <ul>
+                                                        <li><span>140</span> Bumps</li>
+                                                        <li><span>15</span> Top Ad</li>
+                                                        <li><span>7</span> Premium</li>
+                                                        <li><span>1/2w</span> Premium plus</li>
+                                                    </ul>
+                                                </div>
+                                                <!--//FEATURE LIST END-->
+                                                
+                                                <!--BUTTON START-->
+                                                <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Purchase</a>
+                                                </div>
+                                                <!--//BUTTON END-->
+                                                
+                                            </div>
+                                            <!--//PRICE CONTENT END-->
+                                                
+                                        </div>
+
+                                        <div class="col-md-3">
+                                        
+                                            <!--PRICE CONTENT START-->
+                                            <div class="generic_content clearfix">
+                                                
+                                                <!--HEAD PRICE DETAIL START-->
+                                                <div class="generic_head_price clearfix">
+                                                
+                                                    <!--HEAD CONTENT START-->
+                                                    <div class="generic_head_content clearfix">
+                                                    
+                                                    <!--HEAD START-->
+                                                        <div class="head_bg"></div>
+                                                        <div class="head">
+                                                            <span>12 Months</span>
+                                                        </div>
+                                                        <!--//HEAD END-->
+                                                        
+                                                    </div>
+                                                    <!--//HEAD CONTENT END-->
+                                                    
+                                                    <!--PRICE START-->
+                                                    <div class="generic_price_tag clearfix">
+                                                        <span class="price">
+                                                            <span class="sign">&#8373;</span>
+                                                            <span class="currency">7450</span>
+                                                            <span class="cent">.00</span>
+                                                        </span>
+                                                    </div>
+                                                    <!--//PRICE END-->
+                                                    
+                                                </div>                            
+                                                <!--//HEAD PRICE DETAIL END-->
+                                                
+                                                <!--FEATURE LIST START-->
+                                                <div class="generic_feature_list">
+                                                    <ul>
+                                                        <li><span>300</span> Bumps</li>
+                                                        <li><span>34</span> Top Ad</li>
+                                                        <li><span>16</span> Premium</li>
+                                                        <li><span>1/mon</span> Premium plus</li>
+                                                    </ul>
+                                                </div>
+                                                <!--//FEATURE LIST END-->
+                                                
+                                                <!--BUTTON START-->
+                                                <div class="generic_price_btn clearfix">
+                                                <a class="" href="">Purchase</a>
+                                                </div>
+                                                <!--//BUTTON END-->
+                                                
+                                            </div>
+                                            <!--//PRICE CONTENT END-->
+                                                
+                                        </div>
+                                    </div>
+                                    <!--//BLOCK ROW END-->
+                                </section>    
+                            </div>
+                            <!-- End -->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="invoices" role="tabpanel" aria-labelledby="invoices">
+                        <div class="container noMargin">
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="invoice">
+                                    <div class="left">
+                                        <div class="pdfWrapper">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </div>
+                                        Invoice_2020/10.pdf
+                                    </div>
+                                    <div class="mid">
+                                        <span>Date of invoice</span>
+                                        <span>Nov 02, 2020</span>
+                                    </div>
+                                    <div class="right">
+                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $('.icon-bar').hover(function(){
+        $(this).css({
+            width:220
+        })
+        $('.icon-bar span').css({
+            display:'inline'
+        })
+        $('.icon-bar a').css({
+            textAlign:'left'
+        })
+    }, function(){
+        $(this).css({
+            width:70
+        })
+        $('.icon-bar span').css({
+            display:'none'
+        })
+        $('.icon-bar a').css({
+            textAlign:'center'
+        })
+    })
+
+    $('#overview').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #overview").addClass("show active").siblings().removeClass("show active")
+    })
+
+    $('#plans').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #plans").addClass("show active").siblings().removeClass("show active")
+    })
+
+    $('#invoices').on('click', function (e) {
+        e.preventDefault()
+        $(".tab-content #invoices").addClass("show active").siblings().removeClass("show active")
+    })
+</script>
+</html>
