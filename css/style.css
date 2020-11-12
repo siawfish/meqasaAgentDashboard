@@ -1973,10 +1973,6 @@ body {
     text-decoration:none;
     }
 
-    #dailyPageViews, #dailyPhoneView, #dailyLeads {
-        width: 90%;
-    }
-
     .chart {
         background-color: #fff;
         border-radius: 8px;

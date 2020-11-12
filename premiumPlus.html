@@ -32,26 +32,28 @@
             </div>
             <div class="container">
                 <div class="activateContainer">
-                    <button type="button" id="activate" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-diamond" aria-hidden="true"></i> Activate Premium+</button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="now"><i class="fa fa-bolt" aria-hidden="true"></i> Activate Now</div>
-                        <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="schedule"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Premium</div>
+                    <div class="btn-group">
+                        <button type="button" id="activate" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-trophy" aria-hidden="true"></i> Activate Premium+</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="now"><i class="fa fa-bolt" aria-hidden="true"></i> Activate Now</div>
+                            <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="schedule"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Premium</div>
+                        </div>
                     </div>
                     <small>You have <span>17</span> Premium+ remaining</small>
                 </div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="active-premium+" href="#active-premium+" data-toggle="tab" role="tab" aria-controls="active-premium+" aria-selected="true">Active Premium+</a>
+                        <a class="nav-link active" id="active-premium" href="#active-premiumPlus" data-toggle="tab" role="tab" aria-controls="active-premiumPlus" aria-selected="true">Active Premiums+</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="scheduled-premium+" href="#scheduled-premium+" data-toggle="tab" role="tab" aria-controls="scheduled-premium+" aria-selected="true">Scheduled Premium+</a>
+                        <a class="nav-link" id="scheduled-premium" href="#scheduled-premiumPlus" data-toggle="tab" role="tab" aria-controls="scheduled-premiumPlus" aria-selected="true">Scheduled Premium+</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="all-premium+" href="#all-premium+" data-toggle="tab" role="tab" aria-controls="all-premium+" aria-selected="true">All Premiums+</a>
+                        <a class="nav-link" id="all-premium" href="#all-premiumPlus" data-toggle="tab" role="tab" aria-controls="all-premiumPlus" aria-selected="true">All Premiums+</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="active-premium+" role="tabpanel" aria-labelledby="active-premium+">
+                    <div class="tab-pane fade show active" style="padding-top: 10px;" id="active-premiumPlus" role="tabpanel" aria-labelledby="active-premiumPlus">
                         <div class="container noMargin">
                             <div class="bumpsWrapper">
                                 <div class="left">
@@ -97,7 +99,7 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" style="padding-top: 10px;" id="scheduled-premium+" role="tabpanel" aria-labelledby="scheduled-premium+">
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="scheduled-premiumPlus" role="tabpanel" aria-labelledby="scheduled-premiumPlus">
                         <div class="container noMargin">
                             <div class="bumpsWrapper">
                                 <div class="left">
@@ -137,7 +139,7 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" style="padding-top: 10px;" id="all-premium+" role="tabpanel" aria-labelledby="all-premium+">
+                    <div class="tab-pane fade" style="padding-top: 10px;" id="all-premiumPlus" role="tabpanel" aria-labelledby="all-premiumPlus">
                         <div class="container noMargin">
                             <div class="bumpsWrapper">
                                 <div class="left">
@@ -385,17 +387,17 @@
         zindex:9999999
     })
 
-    $('#active-premium+').on('click', function (e) {
+    $('#active-premiumPlus').on('click', function (e) {
         e.preventDefault()
         $(".tab-content #active-premium+").addClass("show active").siblings().removeClass("show active")
     })
 
-    $('#scheduled-premium+').on('click', function (e) {
+    $('#scheduled-premiumPlus').on('click', function (e) {
         e.preventDefault()
         $(".tab-content #scheduled-premium+").addClass("show active").siblings().removeClass("show active")
     })
 
-    $('#all-premium+').on('click', function (e) {
+    $('#all-premiumPlus').on('click', function (e) {
         e.preventDefault()
         $(".tab-content #all-premium+").addClass("show active").siblings().removeClass("show active")
     })
