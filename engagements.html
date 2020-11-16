@@ -36,21 +36,28 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="chart">
-                            <canvas id="dailyPageViews"></canvas>
+                            <canvas id="monthlyPageViews"></canvas>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="chart">
-                            <canvas id="dailyPhoneView"></canvas>
+                            <canvas id="monthlyPhoneView"></canvas>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="chart">
-                            <canvas id="dailyLeads"></canvas>
+                            <canvas id="monthlyLeads"></canvas>
                         </div>
                     </div>
                 </div>
-                <h3>Current plan engagements</h3><span>( 12-months )</span>
+                <div class="btn-group">
+                    <h3 class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="activate">Current plan engagements</h3>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="now">3 Months Subscription</div>
+                        <div class="dropdown-item" type="button" data-toggle="modal" data-target="#activateNow" data-type="schedule">4 Months Subscription</div>
+                    </div>
+                </div>
+                <div>( 12-months )</div>
                 <div class="row">
                     <div class="col-12">
                         <div class="chart">
@@ -94,14 +101,20 @@
             })
         })
 
-        var ctx = document.getElementById('dailyPageViews');
+        $('#activate').click(function(){
+            if($('.dropdown-menu').is(":visible")){
+                $('.dropdown-menu').slideUp('slow')
+            } else $('.dropdown-menu').slideDown('slow')
+        })
+
+        var ctx = document.getElementById('monthlyPageViews');
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
-                    label: 'Daily Page Views',
-                    data: [9, 19, 3, 5, 15, 30, 25],
+                    label: 'Monthly Page Views',
+                    data: [9, 19, 3, 5, 15, 30, 25, 9, 19, 3, 5, 15, 30, 25],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -133,14 +146,14 @@
                 }
             }
         });
-        var ctx1 = document.getElementById('dailyPhoneView');
+        var ctx1 = document.getElementById('monthlyPhoneView');
         var myChart1 = new Chart(ctx1, {
             type: 'line',
             data: {
-                labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
-                    label: 'Daily Phone Views',
-                    data: [12, 19, 3, 5, 2, 20, 30],
+                    label: 'Monthly Phone Views',
+                    data: [12, 19, 3, 5, 2, 20, 30, 12, 19, 3, 5, 2, 20, 30],
                     backgroundColor: [
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(255, 99, 132, 0.2)',
@@ -172,14 +185,14 @@
                 }
             }
         });
-        var ctx2 = document.getElementById('dailyLeads');
+        var ctx2 = document.getElementById('monthlyLeads');
         var myChart2 = new Chart(ctx2, {
             type: 'line',
             data: {
-                labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
-                    label: 'Daily Leads',
-                    data: [08, 05, 30, 15, 12, 32, 28],
+                    label: 'Monthly Leads',
+                    data: [08, 05, 30, 15, 12, 32, 28, 08, 05, 30, 15, 12, 32, 28],
                     backgroundColor: [
                         'rgba(153, 102, 255, 0.2)',
                         'rgba(255, 99, 132, 0.2)',

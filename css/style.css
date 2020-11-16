@@ -1393,6 +1393,9 @@ body {
     box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
     margin:auto;
     height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .expireCard .expireDate {
@@ -1980,4 +1983,8 @@ body {
         -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
         box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
         margin: 20px 0 50px;
+    }
+
+    #activate:hover {
+        cursor: pointer;
     }
