@@ -73,7 +73,7 @@
                                             </div>
                                             <span>3</span>
                                         </div>
-                                        <button>Upgrade plan <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>                                        </button>
+                                        <button id="gotoGetTools">Upgrade plan <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +296,7 @@
                                                 
                                                 <!--BUTTON START-->
                                                 <div class="generic_price_btn clearfix">
-                                                <a class="" href="">Purchase</a>
+                                                <a class="" href="">Current Plan</a>
                                                 </div>
                                                 <!--//BUTTON END-->
                                                 
@@ -550,6 +550,10 @@
         $('.icon-bar a').css({
             textAlign:'center'
         })
+    })
+
+    $("#gotoGetTools").on('click', function(){
+        window.location.replace("gettools.html")
     })
 
     $('#overview').on('click', function (e) {

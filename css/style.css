@@ -1988,3 +1988,61 @@ body {
     #activate:hover {
         cursor: pointer;
     }
+
+.product {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    height: 140px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product .topRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.product .bottomRow button {
+    background-color: #262637;
+    color: #fd5573;
+    padding: 5px 8px;
+    border:none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: smaller;
+    outline: none;
+}
+
+.product .bottomRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconWrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #dedefa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.iconWrap i {
+    font-size: larger;
+}
+
+.product .topRow .productName {
+    width: 75%;
+}
