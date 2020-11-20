@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Products Pane -->
-                    <div class="col-md-9 col-sm-12">
+                    <div class="col-md-8 col-sm-12">
                         <div class="productsWrapper">
                             <h3>Products</h3>
                             <div class="container">
@@ -46,11 +46,11 @@
                                                     <i class="fa fa-certificate"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>One Month Top Ad</h5>
+                                                    <h6>One Month Top Ad</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addOneMonTopAd"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -61,11 +61,11 @@
                                                     <i class="fa fa-bolt"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>Bumps</h5>
+                                                    <h6>Bumps</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addBumps"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -76,11 +76,11 @@
                                                     <i class="fa fa-star"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>Property Of The month</h5>
+                                                    <h6>Property Of The month</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addProOfMon"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -91,11 +91,11 @@
                                                     <i class="fa fa-building"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>Logo & Agent List Feature</h5>
+                                                    <h6>Logo & Agent List Feature</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addCorporate"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -106,11 +106,11 @@
                                                     <i class="fa fa-trophy"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>One Month Premium</h5>
+                                                    <h6>One Month Premium</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addPremium"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -121,11 +121,11 @@
                                                     <i class="fa fa-diamond"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>One Month Premium+</h5>
+                                                    <h6>One Month Premium+</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addPremiumPlus"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -136,11 +136,11 @@
                                                     <i class="fa fa-bolt"></i>
                                                 </div>
                                                 <div class="productName">
-                                                    <h5>One Month Unlimited Bumps</h5>
+                                                    <h6>One Month Unlimited Bumps</h6>
                                                 </div>
                                             </div>
                                             <div class="bottomRow">
-                                                <button><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
+                                                <button id="addUnlimitedBumps"><i class="fa fa-cart-arrow-down"></i> Add to bucket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -149,10 +149,145 @@
                         </div>
                     </div>
                     <!-- Purchases Pane -->
-                    <div class="col-md-3  col-sm-12">
+                    <div class="col-md-4  col-sm-12">
                         <div class="bucketWrapper">
                             <h3>Purchases</h3>
+                            <div class="bucket">
+                                <div class="bucketWrapper">
+                                    <!-- table header -->
+                                    <div class="titleRow">
+                                        <div class="item">
+                                            Product
+                                        </div>
+                                        <div class="qty">
+                                            Qty
+                                        </div>
+                                        <div class="price">
+                                            Price
+                                        </div>
+                                        <div class="action">
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- Cards -->
+                                    <div class="itemsWrapper">
+                                        <div id="oneMonTopAd" class="itemCard">
+                                            <div class="itemName">
+                                                One Month Top Ad
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>141.75</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="proOfMon" class="itemCard">
+                                            <div class="itemName">
+                                                Property Of The month
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>117.18</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="corporate" class="itemCard">
+                                            <div class="itemName">
+                                                Logo & Agent List Feature
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>118.12</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="bumps" class="itemCard">
+                                            <div class="itemName">
+                                                Bumps
+                                            </div>
+                                            <div class="itemQty">
+                                                <select id="bumpsQty">
+                                                    <option value="50">50</option>
+                                                    <option value="75">75</option>
+                                                    <option value="150">150</option>
+                                                    <option value="225">225</option>
+                                                </select>
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>23.62</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="premium" class="itemCard">
+                                            <div class="itemName">
+                                                One Month Premium
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>117.18</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="premiumPlus" class="itemCard">
+                                            <div class="itemName">
+                                                One Month Premium+
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>295.31</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="unlimitedBumps" class="itemCard">
+                                            <div class="itemName">
+                                                One Month Unlimited Bumps
+                                            </div>
+                                            <div class="itemQty">
+                                                <input type="number" value="1" />
+                                            </div>
+                                            <div class="itemPrice">
+                                                &#8373;<span>177.18</span>
+                                            </div>
+                                            <div class="itemAction">
+                                                <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="noPurchases">
+                                        <h6>No products added to bucket</h6>
+                                    </div>
 
+                                    <div class="totalWrapper">
+                                        <div class="topRow">
+                                            <h4>Total</h4>
+                                            <h4 id="totalAmount">0.00</h4>
+                                        </div>
+                                        <button>Pay Now</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +322,75 @@
             })
         })
 
-        
+        $("#addBumps").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #bumps").css("display")==="none"){
+                $(".itemsWrapper #bumps").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addOneMonTopAd").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #oneMonTopAd").css("display")==="none"){
+                $(".itemsWrapper #oneMonTopAd").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addProOfMon").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #proOfMon").css("display")==="none"){
+                $(".itemsWrapper #proOfMon").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addCorporate").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #corporate").css("display")==="none"){
+                $(".itemsWrapper #corporate").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addPremium").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #premium").css("display")==="none"){
+                $(".itemsWrapper #premium").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addPremiumPlus").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #premiumPlus").css("display")==="none"){
+                $(".itemsWrapper #premiumPlus").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $("#addUnlimitedBumps").click(function(){
+            $(".noPurchases").hide()
+            if($(".itemsWrapper #unlimitedBumps").css("display")==="none"){
+                $(".itemsWrapper #unlimitedBumps").css({
+                    display:"flex"
+                })
+            }
+        })
+
+        $(".itemCard .itemAction button").click(function(){
+            $(this).parents(".itemCard").hide()
+            if(!$(".itemsWrapper").children().is(":visible")){
+                $(".noPurchases").show()
+            }
+        })
     </script>
 </body>
 </html>
