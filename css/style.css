@@ -1955,7 +1955,7 @@ body {
         text-transform: uppercase;
     }
     .bottom_btn{
-    background-color: #333333;
+        background-color: #333333;
         color: #ffffff;
         display: table;
         font-size: 28px;
@@ -2199,4 +2199,84 @@ body {
 
 .bucketWrapper .itemCard .itemAction button:hover {
     background-color: rgb(255, 157, 157);
+}
+
+.testimonialBackground {
+    background-color: #262637;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    padding:0 20%
+}
+
+.imageWrapper img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 2px solid #d7d7e2;
+}
+
+.testimonialBackground .name {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: medium;
+    color: #fff;
+}
+
+.testimonialBackground .business {
+    text-align: center;
+    color: #fd5573;
+}
+
+.testimonialBackground .testimony {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.registrationField {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: 5%;
+}
+
+.registrationField h3 {
+    margin-bottom: 50px;
+}
+
+.registrationField .inputField {
+    margin-bottom: 20px;
+}
+
+.registrationField .checkboxWrapper {
+    margin-bottom: 20px;
+}
+
+.registrationField .termsOfUse {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.registrationField button {
+    border: none;
+    background-color: #262637;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    font-weight: bold;
+    outline: none;
+}
+
+.stepTwo {
+    display: none;
 }

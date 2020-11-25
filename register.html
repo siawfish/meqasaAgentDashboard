@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div style="padding:0px" class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonialBackground">
+                    <div class="imageWrapper">
+                        <img src="img/41187690-stock-vector-businessman-profile-icon-male-portrait-business-man-flat-design.jpg" alt="">
+                    </div>
+                    <div class="name">Gerald Amanor</div>
+                    <div class="business">Jools Properties</div>
+                    <div class="testimony">
+                        "Et incididunt est ut elit ipsum consectetur tempor fugiat.
+                        Et incididunt est ut elit ipsum consectetur tempor fugiat."
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="registrationField">
+                    <h3>Complete the form below</h3>
+                    <div class="stepOne">
+                        <div class="inputField">
+                            <label for="experience">Full name</label>
+                            <input type="text" />
+                            <small>Please enter your name, not the name of your business</small>
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Phone number</label>
+                            <input type="number" />
+                        </div>
+                        <div class="inputField">
+                            <label for="experience">Number of properties</label>
+                            <input type="number" />
+                        </div>
+                        <div class="checkboxWrapper">
+                            <label class="label" for="utilities">Choose profile type</label>
+                            <div class="checkboxField">
+                                <label class="containerContainer">Estate Agent (Individual)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="containerContainer">Estate Agent (Company)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="containerContainer">Developer
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="containerContainer">Home Owner
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="termsOfUse">
+                            <label class="containerContainer">I agree to the Terms of Use of Meqasa
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <button>Register</button>
+                    </div>
+                    <div class="stepTwo">
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Primary Service Area *</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Your Registration Fee</label>
+                                    <input type="text" />
+                                    <small>Fee to your client for your services</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Your Commission Rate</label>
+                                    <input type="text" />
+                                    <small>Commission from Landlord on Property Rented</small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Your Commission Rate</label>
+                                    <input type="text" />
+                                    <small>Commission from Tenant on Property Rented</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Your Commission Rate</label>
+                                    <input type="text" />
+                                    <small>Commission from Seller on Property Rented</small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputField">
+                                    <label for="experience">Your Commission Rate</label>
+                                    <input type="text" />
+                                    <small>Commission from Buyer on Property Sold</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Create Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(".checkboxWrapper .containerContainer input").click(function(){
+            $(this).parent().siblings().children("input").prop("checked", false)
+        })
+
+        $(".stepOne button").click(function(){
+            $(".stepOne").hide()
+            $(".registrationField").css({
+                maxWidth:"80%"
+            })
+            $(".stepTwo").show()
+        })
+    </script>
+</body>
+</html>
