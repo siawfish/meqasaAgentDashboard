@@ -29,7 +29,7 @@
                 <a href="premium.html"><i class="fa fa-trophy"></i><span>Premiums</span></a>
                 <a href="premiumPlus.html"><i class="fa fa-diamond"></i><span>Premium+</span></a>
                 <a href="engagements.html"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
-                <a href="subscriptions.html"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
+                <a class="active" href="subscriptions.html"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
             </div>
             <div class="container">
                 <div class="row">
@@ -179,7 +179,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>141.75</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -193,7 +193,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>117.18</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -207,7 +207,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>118.12</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -226,7 +226,7 @@
                                                 </select>
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>23.62</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -240,7 +240,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>117.18</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -254,7 +254,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>295.31</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -268,7 +268,7 @@
                                                 <input type="number" value="1" />
                                             </div>
                                             <div class="itemPrice">
-                                                &#8373;<span>177.18</span>
+                                                &#8373;<span></span>
                                             </div>
                                             <div class="itemAction">
                                                 <button><i class="fa fa-times-circle" aria-hidden="true"></i></button>
@@ -282,7 +282,7 @@
                                     <div class="totalWrapper">
                                         <div class="topRow">
                                             <h4>Total</h4>
-                                            <h4 id="totalAmount">0.00</h4>
+                                            <h4 id="totalAmount">&#8373;<span>0.00</span></h4>
                                         </div>
                                         <button>Pay Now</button>
                                     </div>
@@ -300,117 +300,211 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-        $('.icon-bar').hover(function(){
-            $(this).css({
-                width:220
+        $(document).ready(function(){
+            $('.icon-bar').hover(function(){
+                $(this).css({
+                    width:220
+                })
+                $('.icon-bar span').css({
+                    display:'inline'
+                })
+                $('.icon-bar a').css({
+                    textAlign:'left'
+                })
+            }, function(){
+                $(this).css({
+                    width:70
+                })
+                $('.icon-bar span').css({
+                    display:'none'
+                })
+                $('.icon-bar a').css({
+                    textAlign:'center'
+                })
             })
-            $('.icon-bar span').css({
-                display:'inline'
+
+            $("#addBumps").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #bumps").css("display")==="none"){
+                    $(".itemsWrapper #bumps").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #bumps .itemQty select").trigger("change")
+                }
             })
-            $('.icon-bar a').css({
-                textAlign:'left'
+
+            $("#addOneMonTopAd").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #oneMonTopAd").css("display")==="none"){
+                    $(".itemsWrapper #oneMonTopAd").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #oneMonTopAd .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #oneMonTopAd .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #oneMonTopAd .itemQty input").val(parseInt(nowVal)+1)
+                    if(newVal>=2 && newVal<4){
+                        $(".itemsWrapper #oneMonTopAd .itemPrice span").html((129.93*newVal).toFixed(2))
+                    } else if(newVal>=4){
+                        $(".itemsWrapper #oneMonTopAd .itemPrice span").html((106.31*newVal).toFixed(2))
+                    }
+                }
             })
-        }, function(){
-            $(this).css({
-                width:70
+
+            $("#oneMonTopAd .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                if(val==1){
+                    $(".itemsWrapper #oneMonTopAd .itemPrice span").html((141.75*val).toFixed(2))
+                } else if(val>=2 && val<4){
+                    $(".itemsWrapper #oneMonTopAd .itemPrice span").html((129.93*val).toFixed(2))
+                } else if(val>=4){
+                    $(".itemsWrapper #oneMonTopAd .itemPrice span").html((106.31*val).toFixed(2))
+                }
             })
-            $('.icon-bar span').css({
-                display:'none'
+
+            $("#addProOfMon").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #proOfMon").css("display")==="none"){
+                    $(".itemsWrapper #proOfMon").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #proOfMon .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #proOfMon .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #proOfMon .itemQty input").val(parseInt(nowVal)+1)
+                    $(".itemsWrapper #proOfMon .itemPrice span").html((177.18*newVal).toFixed(2))
+                }
             })
-            $('.icon-bar a').css({
-                textAlign:'center'
+
+            $("#proOfMon .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                $(".itemsWrapper #proOfMon .itemPrice span").html((177.18*val).toFixed(2))
             })
-        })
 
-        $("#addBumps").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #bumps").css("display")==="none"){
-                $(".itemsWrapper #bumps").css({
-                    display:"flex"
+            $("#addCorporate").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #corporate").css("display")==="none"){
+                    $(".itemsWrapper #corporate").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #corporate .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #corporate .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #corporate .itemQty input").val(parseInt(nowVal)+1)
+                    $(".itemsWrapper #corporate .itemPrice span").html((118.12*newVal).toFixed(2))
+                }
+            })
+
+            $("#corporate .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                $(".itemsWrapper #corporate .itemPrice span").html((118.12*val).toFixed(2))
+            })
+
+            $("#addPremium").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #premium").css("display")==="none"){
+                    $(".itemsWrapper #premium").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #premium .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #premium .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #premium .itemQty input").val(parseInt(nowVal)+1)
+                    $(".itemsWrapper #premium .itemPrice span").html((177.18*newVal).toFixed(2))
+                }
+            })
+
+            $("#premium .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                $(".itemsWrapper #premium .itemPrice span").html((177.18*val).toFixed(2))
+            })
+
+            $("#addPremiumPlus").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #premiumPlus").css("display")==="none"){
+                    $(".itemsWrapper #premiumPlus").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #premiumPlus .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #premiumPlus .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #premiumPlus .itemQty input").val(newVal)
+                    $(".itemsWrapper #premiumPlus .itemPrice span").html((295.31*newVal).toFixed(2))
+                }
+            })
+
+            $("#premiumPlus .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                $(".itemsWrapper #premiumPlus .itemPrice span").html((295.31*val).toFixed(2))
+            })
+
+            $("#addUnlimitedBumps").click(function(){
+                $(".noPurchases").hide()
+                if($(".itemsWrapper #unlimitedBumps").css("display")==="none"){
+                    $(".itemsWrapper #unlimitedBumps").css({
+                        display:"flex"
+                    })
+                    $(".itemsWrapper #unlimitedBumps .itemQty input").trigger("keyup")
+                } else {
+                    let nowVal = $(".itemsWrapper #unlimitedBumps .itemQty input").val()
+                    let newVal = parseInt(nowVal)+1
+                    $(".itemsWrapper #unlimitedBumps .itemQty input").val(newVal)
+                    $(".itemsWrapper #unlimitedBumps .itemPrice span").html((177.18*newVal).toFixed(2))
+                }
+            })
+
+            $("#unlimitedBumps .itemQty input").on("keyup", function(){
+                let val = $(this).val()
+                $(".itemsWrapper #unlimitedBumps .itemPrice span").html((177.18*val).toFixed(2))
+            })
+
+            $(".itemCard .itemAction button").click(function(){
+                $(this).parents(".itemCard").hide()
+                if(!$(".itemsWrapper").children().is(":visible")){
+                    $(".noPurchases").show()
+                }
+            })
+
+            $(".itemCard .itemQty input").on("change", function(){
+                if($(this).val()<1){
+                    $(this).val(1).trigger("keyup")
+                }
+            })
+
+            $(".itemCard #bumpsQty").on("change", function(){
+                if($(this).val()==="50"){
+                    $(".itemsWrapper #bumps .itemPrice span").html(23.62)
+                }
+                if($(this).val()==="75"){
+                    $(".itemsWrapper #bumps .itemPrice span").html(35.43)
+                }
+                if($(this).val()==="150"){
+                    $(".itemsWrapper #bumps .itemPrice span").html(70.87)
+                }
+                if($(this).val()==="225"){
+                    $(".itemsWrapper #bumps .itemPrice span").html(106.31)
+                }
+            })
+
+            $(".itemsWrapper").on("DOMSubtreeModified", function(){
+                let prices = $(".itemsWrapper .itemPrice span")
+                let total = []
+                prices.each(function(index){
+                    if($(this).is(":visible")){
+                        let val = $(this).html()
+                        total.push(val)
+                    }
                 })
-            }
+                let sum = 0
+                $.each(total,function(){sum+=parseFloat(this) || 0;})
+                $("#totalAmount span").html(sum)
+            }) 
         })
-
-        $("#addOneMonTopAd").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #oneMonTopAd").css("display")==="none"){
-                $(".itemsWrapper #oneMonTopAd").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #oneMonTopAd .itemQty input").val()
-                $(".itemsWrapper #oneMonTopAd .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $("#addProOfMon").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #proOfMon").css("display")==="none"){
-                $(".itemsWrapper #proOfMon").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #proOfMon .itemQty input").val()
-                $(".itemsWrapper #proOfMon .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $("#addCorporate").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #corporate").css("display")==="none"){
-                $(".itemsWrapper #corporate").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #corporate .itemQty input").val()
-                $(".itemsWrapper #corporate .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $("#addPremium").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #premium").css("display")==="none"){
-                $(".itemsWrapper #premium").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #premium .itemQty input").val()
-                $(".itemsWrapper #premium .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $("#addPremiumPlus").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #premiumPlus").css("display")==="none"){
-                $(".itemsWrapper #premiumPlus").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #premiumPlus .itemQty input").val()
-                $(".itemsWrapper #premiumPlus .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $("#addUnlimitedBumps").click(function(){
-            $(".noPurchases").hide()
-            if($(".itemsWrapper #unlimitedBumps").css("display")==="none"){
-                $(".itemsWrapper #unlimitedBumps").css({
-                    display:"flex"
-                })
-            } else {
-                let nowVal = $(".itemsWrapper #unlimitedBumps .itemQty input").val()
-                $(".itemsWrapper #unlimitedBumps .itemQty input").val(parseInt(nowVal)+1)
-            }
-        })
-
-        $(".itemCard .itemAction button").click(function(){
-            $(this).parents(".itemCard").hide()
-            if(!$(".itemsWrapper").children().is(":visible")){
-                $(".noPurchases").show()
-            }
-        })
-
-
     </script>
 </body>
 </html>
