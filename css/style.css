@@ -2292,7 +2292,7 @@ body {
 }
 
 .appImgWrapper img {
-    width: 800px;
+    width: 700px;
     height: auto;
 }
 
@@ -2404,6 +2404,35 @@ body {
 
 .createAccLink a {
     color: #fd5573;
+}
+
+.signupField {
+    max-width: 57%;
+}
+
+.channelWrapper {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.channel {
+    flex: 1;
+    background-color: #262637;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 8px;
+    color: #fd5573;
+    font-weight: bold;
+}
+
+#err {
+    color: red;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign up for meQasa Account</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="registrationField loginField signupField">
+                    <h3>Sign up</h3>
+                    <div id="err"></div>
+                    <div class="channelWrapper">
+                        <div class="channel">
+                            <label class="containerContainer">Register To List Properties
+                                <input id="listProperty" type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="channel">
+                            <label class="containerContainer">Register As Home Seeker
+                                <input id="seekProperty" type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="signinOptions">
+                        <div class="google-btn">
+                            <div class="google-icon-wrapper">
+                                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                            </div>
+                            <p class="btn-text"><b>Signup with Google</b></p>
+                        </div>
+                        <div class="google-btn yahoo">
+                            <div class="google-icon-wrapper">
+                                <img class="google-icon" src="./img//yahooIcon.png"/>
+                            </div>
+                            <p class="btn-text"><b>Signup with Yahoo!</b></p>
+                        </div>
+                        <div class="google-btn facebook">
+                            <div class="google-icon-wrapper">
+                                <img class="google-icon" src="./img/facebookIcon.png"/>
+                            </div>
+                            <p class="btn-text"><b>Signup with Facebook</b></p>
+                        </div>
+                    </div>
+                    <div class="inputField">
+                        <label for="experience">Enter your email address</label>
+                        <input type="text" />
+                    </div>
+                    <div class="inputField">
+                        <label for="experience">Your password</label>
+                        <input type="text" />
+                    </div>
+                    <button>Sign Up</button>
+                    <p class="createAccLink">Already have an account? <a href="./login.html">Log in.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(".channelWrapper .containerContainer input").click(function(){
+            $(this).parent().parent().siblings().children().children("input").prop("checked", false)
+        })
+
+        $(".signupField button").click(function(){
+            $("#err").html("")
+            if($("#listProperty").is(":checked")){
+                window.location.replace('register.html')
+            } else if($("#seekProperty").is(":checked")){
+                alert("Directing you to dash your dashboard")
+            } else {
+                $("#err").html("Please select a channel")
+            }
+        })
+    </script>
+</body>
+</html>
