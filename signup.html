@@ -6,29 +6,58 @@
     <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sign up for meQasa Account</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="registrationField loginField signupField">
-                    <h3>Sign up</h3>
-                    <div id="err"></div>
-                    <div class="channelWrapper">
-                        <div class="channel">
-                            <label class="containerContainer">Register To List Properties
-                                <input id="listProperty" type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
+                <div class="channelWrapper">
+                    <h3>Sign up as...</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <div data-channel="Estate Agent" class="channel">
+                                <div class="iconWrapper">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <h5>Estate Agent</h5>
+                                <p>Tell us a bit about your property listing, and we'll find you a potential homebuyer from our database of thousands!</p>
+                            </div>
                         </div>
-                        <div class="channel">
-                            <label class="containerContainer">Register As Home Seeker
-                                <input id="seekProperty" type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
+                        <div class="col-6">
+                            <div data-channel="Developer" class="channel">
+                                <div class="iconWrapper">
+                                    <i class="fa fa-building" aria-hidden="true"></i>
+                                </div>
+                                <h5>Developer</h5>
+                                <p>One deal won't cut it. We are here to give you free advice and consultation to help you grow your real estate business.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div data-channel="Home Owner" class="channel">
+                                <div class="iconWrapper">
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                </div>
+                                <h5>Home Owner</h5>
+                                <p>With our various marketing efforts targeted to the right audience, we can give you referrals that match your requirements. All you have to do is wait.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div data-channel="Home Seeker" class="channel">
+                                <div class="iconWrapper">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                                <h5>Home Seeker</h5>
+                                <p>Keep track of your favourite properties while you look for that dream home.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="registrationField signupField">
+                    <h3 id="title"></h3>
+                    <div id="err"></div>
                     <div class="signinOptions">
                         <div class="google-btn">
                             <div class="google-icon-wrapper">
@@ -63,25 +92,64 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="myModal" data-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            <button data-channel="Individual Agent" class="estateAgent">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Individual Agent
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button data-channel="Individual Agent" class="estateAgent">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Agency Agent
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <script src="js/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-        $(".channelWrapper .containerContainer input").click(function(){
-            $(this).parent().parent().siblings().children().children("input").prop("checked", false)
-        })
-
-        $(".signupField button").click(function(){
-            $("#err").html("")
-            if($("#listProperty").is(":checked")){
-                window.location.replace('register.html')
-            } else if($("#seekProperty").is(":checked")){
-                alert("Directing you to dash your dashboard")
+        $(".channel").click(function(){
+            var channel = $(this).attr("data-channel")
+            if(channel==="Estate Agent"){
+                $('#myModal').modal('show')
             } else {
-                $("#err").html("Please select a channel")
+                $(".channelWrapper").fadeOut("fast")
+                $(".signupField #title").html("Signing up as "+channel)
+                $(".signupField").fadeIn("slow")
             }
         })
+
+        $("#myModal button").click(function(){
+            var agent = $(this).attr("data-channel")
+            $('#myModal').data("data-channel",agent)
+            $('#myModal').modal('hide')
+        })
+
+        $('#myModal').on('hidden.bs.modal', function (e) {
+            // do something...
+            var channel = $(this).data("data-channel")
+            $(".channelWrapper").fadeOut("fast")
+            $(".signupField #title").html("Signing up as "+channel)
+            $(".signupField").fadeIn("slow")
+        })
+
+        // $(".signupField button").click(function(){
+        //     $("#err").html("")
+            
+        // })
     </script>
 </body>
 </html>

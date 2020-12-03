@@ -2229,6 +2229,32 @@ body {
 .testimonialBackground .business {
     text-align: center;
     color: #fd5573;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body .estateAgent {
+    width: 100%;
+    background-color: #262637;
+    color: #fd5573;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+
+.modal-body .estateAgent i {
+    font-size: 18px;
+}
+
+.testimonialBackground .business img {
+    margin-right: 5px;
 }
 
 .testimonialBackground .testimony {
@@ -2296,12 +2322,16 @@ body {
     height: auto;
 }
 
-.loginField {
+.loginField, .signupField {
     margin:auto
 }
 
 .loginField button {
     width: 100%;
+}
+
+.loginField .google-btn {
+    width: 49%;
 }
 
 .google-btn {
@@ -2335,7 +2365,7 @@ body {
 
 .btn-text {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.2px;
     margin-right: 10px;
     margin-top: 10px;
@@ -2408,25 +2438,54 @@ body {
 
 .signupField {
     max-width: 57%;
-}
-
-.channelWrapper {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 10px;
-    justify-content: space-evenly;
+    display: none;
+    padding-top: 10%;
 }
 
 .channel {
-    flex: 1;
-    background-color: #262637;
-    padding: 10px;
-    margin: 0 5px;
-    border-radius: 8px;
-    color: #fd5573;
-    font-weight: bold;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 20px;
+    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    cursor: pointer;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel:hover {
+    -webkit-box-shadow: -1px -1px 15px 6px #dedefa;
+    -moz-box-shadow: -1px -1px 15px 6px #dedefa;
+    box-shadow: -1px -1px 15px 6px #dedefa;
+}
+
+.channel p{
+    text-align: center;
+}
+
+.channel .iconWrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #dedefa;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel .iconWrapper i {
+    font-size: 50px;
+    color: #262637;
+}
+
+.channelWrapper {
+    margin-top: 10%;
 }
 
 #err {
