@@ -285,12 +285,10 @@
                         </div>
     
                         <div class="fieldsWrapper">
+                            <label class="label" for="photos">Photos</label>
                             <div class="row">
-                                <div class="col">
-                                    <label class="label" for="photos">Photos</label>
-                                    <div class="addImage">
-                                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                    </div>
+                                <div id="addImage">
+                                    <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->
                                 </div>
                             </div>
                         </div>
@@ -1201,9 +1199,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> 
     <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/spartan-multi-image-picker-master/dist/js/spartan-multi-image-picker-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
@@ -1297,6 +1295,11 @@
                 $("#b1").css({
                     display:"flex"
                 })
+            })
+
+            $("#addImage").spartanMultiImagePicker({
+                fieldName:   'fileUpload[]',
+                groupClassName: 'col-md-3'
             })
        })
     </script>

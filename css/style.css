@@ -833,17 +833,19 @@ body {
     transform: rotate(45deg);
 }
 
-.addImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    border: 1px dashed#fd5573;
+#addImage {
+    width: 100%;
+    /* height: 150px;
+    margin: 5px 10px;
+    border-radius: 8px; */
+    /* border: 1px dashed#fd5573; */
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    font-size: xx-large;
+    flex-wrap: wrap;
+    /* font-size: xx-large;
     color: #fd5573;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
 .page2 {
