@@ -229,6 +229,9 @@
     <div class="modal fade" id="bumpNow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle" aria-hidden="true"></i> Close</button>
+                </div>
                 <div class="modal-body">
                     <div class="heading">
                         <div class="titleWrapper">
@@ -455,6 +458,10 @@
             $(this).siblings().css({
                 visibility:"hidden"
             })
+        })
+
+        $(".modal-header .btn-close").click(function(){
+            window.location.replace("bumps.html")
         })
     </script>
 </body>

@@ -33,6 +33,13 @@
     
             <div class="container">
                <div class="addListingsWrapper">
+                    <div id="b1" class="actionsWrapper">
+                        <button class="closeAddListing">Close</button>
+                    </div>
+                    <div id="b2" class="actionsWrapper">
+                        <button id="previousListing"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</button>
+                        <button class="closeAddListing"><i class="fa fa-times-circle" aria-hidden="true"></i> Close</button>
+                    </div>
                     <div class="page1">
                         <h3>Property Information & Price</h3>
                         <div class="fieldsWrapper">
@@ -192,7 +199,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div style="margin-top: 20px;" class="pageActionsWrapper">
+                            <button class="closeAddListing"><i class="fa fa-times-circle" aria-hidden="true"></i> Close</button>
+                            <button style="float: right;" id="nextListing">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                        </div>
                     </div>
+
                     <div class="page2">
                         <h3>Property Amenities, Photos & Miscellaneous</h3>
                         <div class="fieldsWrapper">
@@ -306,8 +318,15 @@
                                         <input checked type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
+                                    <label class="containerContainer">Newly built
+                                        <input checked type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pageActionsWrapper">
+                            <button class="submitListing">Submit <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1271,7 +1290,7 @@
                 })
             })
 
-            $("#closeAddListing").click(function(){
+            $(".closeAddListing").click(function(){
                 window.location.replace("listings.html")
             })
 
