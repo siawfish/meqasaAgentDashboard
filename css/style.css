@@ -855,19 +855,71 @@ body {
     transform: rotate(45deg);
 }
 
-#addImage {
+.addImage {
     width: 100%;
-    /* height: 150px;
-    margin: 5px 10px;
-    border-radius: 8px; */
-    /* border: 1px dashed#fd5573; */
+    height: 150px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px dashed#fd5573;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    /* font-size: xx-large;
     color: #fd5573;
-    cursor: pointer; */
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: 150px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer; 
+    border: 1px dashed#fd5573;
+    position: relative;
+}
+
+.image .remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 4px;
+    background-color: #262637;
+    border: none;
+}
+
+.image .remove i {
+    color: red;
+}
+
+.image .change {
+    position: absolute;
+    bottom: 8px;
+    left: 18px;
+    border-radius: 4px;
+    background-color: #262637;
+    border: none;
+    color: #fd5573;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.addImage i {
+    font-size: x-large;
+}
+
+.addImage small {
+    color: #999;
+}
+
+.addImage input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
 }
 
 .page2 {
