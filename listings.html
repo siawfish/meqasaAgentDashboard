@@ -43,28 +43,55 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="inputField">
-                                        <label for="mobile">Locality *</label>
-                                        <input placeholder="eg. Achimota" id=mobile type="text" />
+                                        <label for="locality">Locality *</label>
+                                        <input id="locality" placeholder="eg. Achimota" id=mobile type="text" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="inputField">
-                                        <label for="mobile">Property Type *</label>
-                                        <input id=mobile type="number" />
+                                        <label for="propertyType">Property Type *</label>
+                                        <div class="custom-select-wrapper">
+                                            <div class="custom-select">
+                                                <div class="custom-select__trigger"><span id="propertyType" >Select property type</span>
+                                                    <div class="arrow"></div>
+                                                </div>
+                                                <div class="custom-options">
+                                                    <span class="custom-option selected" data-value="Apartment">Apartment</span>
+                                                    <span class="custom-option" data-value="Commercial Space">Commercial Space</span>
+                                                    <span class="custom-option" data-value="Guest House">Guest House</span>
+                                                    <span class="custom-option" data-value="House">House</span>
+                                                    <span class="custom-option" data-value="Office">Office</span>
+                                                    <span class="custom-option" data-value="Retail">Retail</span>
+                                                    <span class="custom-option" data-value="Shop">Shop</span>
+                                                    <span class="custom-option" data-value="Townhouse">Townhouse</span>
+                                                    <span class="custom-option" data-value="Warehouse">Warehouse</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <div class="inputField">
-                                        <label for="mobile">Contract Type *</label>
-                                        <input id=mobile type="number" />
+                                        <label for="contractType">Contract Type *</label>
+                                        <div class="custom-select-wrapper">
+                                            <div class="custom-select">
+                                                <div class="custom-select__trigger"><span id="contractType">Select contract type</span>
+                                                    <div class="arrow"></div>
+                                                </div>
+                                                <div class="custom-options">
+                                                    <span class="custom-option selected" data-value="Sale">Sale</span>
+                                                    <span class="custom-option" data-value="Rent">Rent</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="inputField">
                                         <label for="mobile">Bedrooms *</label>
-                                        <input placeholder="Number of bedrooms" id=mobile type="number" />
+                                        <input min="0" placeholder="Number of bedrooms" id="noBedrooms" type="number" />
                                     </div>
                                 </div>
                             </div>
@@ -72,13 +99,13 @@
                                 <div class="col">
                                     <div class="inputField">
                                         <label for="mobile">Bathrooms *</label>
-                                        <input placeholder="Number of bathrooms" id=mobile type="number" />
+                                        <input min="0" placeholder="Number of bathrooms" id="noBathrooms" type="number" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="inputField">
                                         <label for="mobile">Floor Area (sq m)</label>
-                                        <input placeholder="Enter floor area" id=mobile type="number" />
+                                        <input min="0" placeholder="Enter floor area" id="floorArea" type="number" />
                                     </div>
                                 </div>
                             </div>
@@ -86,25 +113,47 @@
                                 <div class="col">
                                     <div class="inputField">
                                         <label for="mobile">Garages</label>
-                                        <input placeholder="Number of parking spaces" id=mobile type="text" />
+                                        <input min="0" placeholder="Number of parking spaces" id="noGarages" type="number" />
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="checkboxField">
-                                        <label class="containerContainer">Furniture
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        
-                                        <label class="containerContainer">Self Contained
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        
-                                        <label class="containerContainer">Private Compound
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="checkboxField">
+                                                <label class="containerContainer">Furnished
+                                                    <input id="furnished" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                
+                                                <label class="containerContainer">Self Contained
+                                                    <input id="selfContained" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                
+                                                <label class="containerContainer">Private Compound
+                                                    <input id="privateCompound" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="checkboxField">
+                                                <label class="containerContainer">Uncompleted
+                                                    <input id="uncompleted" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                
+                                                <label class="containerContainer">Parking Space
+                                                    <input id="parkingSpace" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                
+                                                <label class="containerContainer">Newly Built
+                                                    <input id="newlyBuilt" type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -112,37 +161,38 @@
     
                         <div class="fieldsWrapper">
                             <label class="label" for="Pricing Offers">Select one or more base pricing offers*</label>
-                            <div class="row">
+
+                            <div id="rateDurationRow" class="row">
                                 <div class="col">
                                     <div class="checkboxField">
                                         <label class="containerContainer">Per Month
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkPerMonth" type="checkbox" checked>
                                             <span class="checkmark"></span>
                                         </label>
                                         <div class="inputField">
-                                            <input type="number" />
+                                            <input id="perMonthRate" type="number" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="checkboxField">
                                         <label class="containerContainer">Per Week
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkPerWeek" type="checkbox" />
                                             <span class="checkmark"></span>
                                         </label>
                                         <div class="inputField">
-                                            <input disabled type="number" />
+                                            <input id="perWeekRate" disabled type="number" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="checkboxField">
                                         <label class="containerContainer">Per Day
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkPerDay" type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
                                         <div class="inputField">
-                                            <input disabled type="number" />
+                                            <input id="perDayRate" disabled type="number" />
                                         </div>
                                     </div>
                                 </div>
@@ -152,12 +202,12 @@
                                 <div class="col-4">
                                     <div class="checkboxField">
                                         <label class="containerContainer">Service charges apply
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkServiceCharge" type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
                                         <div class="inputField">
-                                            <label for="serviceCharge">Service charge (USD)</label>
-                                            <input disabled type="number" />
+                                            <label for="serviceCharge">Service charge if aplicable (GHS)</label>
+                                            <input id="serviceCharge" disabled type="number" />
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +215,13 @@
                                     <div class="checkboxField">
                                         <label class="label" for="currency">Currency</label>
                                         <label class="containerContainer">GHC
-                                            <input type="checkbox" checked="checked">
+                                            <input disabled type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div id="commercialExtra" class="checkboxField">
+                                        <label class="containerContainer">Price per m<sup>2</sup>
+                                            <input type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -174,21 +230,20 @@
                                     <div class="checkboxField">
                                         <label class="label" for="commission">Commission</label>
                                         <label class="containerContainer">Percentage
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkCommPercentage" type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="containerContainer">One Month Rent
-                                            <input type="checkbox" checked="checked">
+                                            <input id="checkCommMonthly" type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
-                                    
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="checkboxField">
                                         <label class="label" for="negotiations">Negotiations</label>
                                         <label class="containerContainer">Negotiable
-                                            <input type="checkbox" checked="checked">
+                                            <input type="checkbox">
                                             <span class="checkmark"></span>
                                         </label>
                                     
@@ -203,7 +258,7 @@
                     </div>
 
                     <div class="page2">
-                        <h3>Property Amenities, Photos & Miscellaneous</h3>
+                        <h3>General Amenities, Photos & Miscellaneous</h3>
                         <div class="fieldsWrapper">
                             <div class="row">
                                 <div class="col">
@@ -308,7 +363,7 @@
                         <div style="margin-bottom: 40px;" class="fieldsWrapper">
                             <div class="row">
                                 <div class="col">
-                                    <label class="label" for="photos">Miscellaneous</label>
+                                    <label class="label" for="photos">Describe your property</label>
                                     <div class="inputField">
                                         <label for="about">Notes</label>
                                         <textarea rows="2" cols="50"></textarea>
@@ -316,11 +371,7 @@
                                 </div>
                                 <div class="col">
                                     <label class="containerContainer">Currently available
-                                        <input checked type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="containerContainer">Newly built
-                                        <input checked type="checkbox">
+                                        <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -342,7 +393,9 @@
                 </div>
                
                 <div class="listingsWrapper">
-                    <button class="addListing"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Listing</button>
+                    <div class="activateContainer">
+                        <button class="addListing"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Listing</button>
+                    </div>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                         <a class="nav-link active" id="all-listings" data-toggle="tab" role="tab" aria-controls="all-listings" aria-selected="true" href="#all-listings">All Listings</a>
@@ -364,7 +417,7 @@
                         </div>
                         <div class="tab-pane fade show active" style="padding-top: 10px;" id="all-listings" role="tabpanel" aria-labelledby="all-listings">
                             <div class="container noMargin">
-    
+                                <!-- All listings -->
                                 <div class="listingContainer">
                                     <div class="showWrapper">
                                         <div class="leftRightWrap">
@@ -603,367 +656,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="listingContainer">
-                                    <div class="showWrapper">
-                                        <div class="leftRightWrap">
-                                            <div class="left">
-                                                <img src="img/house.jpeg" width="200px" height="180px" />
-                                            </div>
-                                            <div class="middle">
-                                                <h5>3 bedroom furnished guest house for sale at Achimota</h5>
-                                                <p>
-                                                    Veniam commodo commodo ad duis mollit elit sunt non ea est in.
-                                                </p>
-                                                <h5>₵150,000</h5>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="pending">
-                                                <span>Pending</span>
-                                            </div>
-                                            <div class="stats">
-                                                <span><i class="fa fa-eye" aria-hidden="true"></i> 30</span>
-                                                <span><i class="fa fa-phone" aria-hidden="true"></i> 10</span>
-                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> 5</span>
-                                            </div>
-                                            <div class="actions">
-                                                <button>Edit</button>
-                                                <button>Sold</button>
-                                                <button>Bump</button>
-                                                <button>Delete</button>
-                                            </div>
-                                            <p>Last updated: Oct 20, 2020 04:51 pm</p>
-                                        </div>
-                                    </div>
-                                    <div class="hiddenWrapper">
-                                        <div class="left">
-                                            <img src="img/house.jpeg" width="230px" height="230px" />
-                                            <div class="thumbnails">
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                            </div>
-                                        </div>
-                                        <div class="middle">
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Categories:</label>
-                                                    <div>Guest house for Sale</div>
-                                                    <div>Guest house for Sale in Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Commission:</label>
-                                                    <div>20.0 % (GH₵ 24,000)</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                    <div class="listWrapper">
-                                                        <label>Registration fee:</label>
-                                                        <div>GH₵ 50</div>
-                                                    </div>
-                                                    <div class="listWrapper">
-                                                        <label>Bedrooms:</label>
-                                                        <div>3</div>
-                                                    </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Bathrooms:</label>
-                                                    <div>3</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Garage:</label>
-                                                    <div>1</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Furnished:</label>
-                                                    <div>Furnished</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Area:</label>
-                                                    <div>147 m2</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Address:</label>
-                                                    <div>Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Reference:</label>
-                                                    <div>139374</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="listWrapper">
-                                                <label>Amenities:</label>
-                                                <div class="amenities">
-                                                    <div class="amenitiesList"><div class="dot"></div>Air conditioning </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Cooker </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Washing machine </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Fans </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Swimming pool </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Security service </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Water reservoir </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Refrigerator </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Microwave </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Internet </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Dstv </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Garage </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Annexe (Boys' quarters) </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Roof terrace </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listingContainer">
-                                    <div class="showWrapper">
-                                        <div class="leftRightWrap">
-                                            <div class="left">
-                                                <img src="img/house.jpeg" width="200px" height="180px" />
-                                            </div>
-                                            <div class="middle">
-                                                <h5>3 bedroom furnished guest house for sale at Achimota</h5>
-                                                <p>
-                                                    Veniam commodo commodo ad duis mollit elit sunt non ea est in.
-                                                </p>
-                                                <h5>₵150,000</h5>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="pending">
-                                                <span>Pending</span>
-                                            </div>
-                                            <div class="stats">
-                                                <span><i class="fa fa-eye" aria-hidden="true"></i> 30</span>
-                                                <span><i class="fa fa-phone" aria-hidden="true"></i> 10</span>
-                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> 5</span>
-                                            </div>
-                                            <div class="actions">
-                                                <button>Edit</button>
-                                                <button>Sold</button>
-                                                <button>Bump</button>
-                                                <button>Delete</button>
-                                            </div>
-                                            <p>Last updated: Oct 20, 2020 04:51 pm</p>
-                                        </div>
-                                    </div>
-                                    <div class="hiddenWrapper">
-                                        <div class="left">
-                                            <img src="img/house.jpeg" width="230px" height="230px" />
-                                            <div class="thumbnails">
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                            </div>
-                                        </div>
-                                        <div class="middle">
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Categories:</label>
-                                                    <div>Guest house for Sale</div>
-                                                    <div>Guest house for Sale in Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Commission:</label>
-                                                    <div>20.0 % (GH₵ 24,000)</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                    <div class="listWrapper">
-                                                        <label>Registration fee:</label>
-                                                        <div>GH₵ 50</div>
-                                                    </div>
-                                                    <div class="listWrapper">
-                                                        <label>Bedrooms:</label>
-                                                        <div>3</div>
-                                                    </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Bathrooms:</label>
-                                                    <div>3</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Garage:</label>
-                                                    <div>1</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Furnished:</label>
-                                                    <div>Furnished</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Area:</label>
-                                                    <div>147 m2</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Address:</label>
-                                                    <div>Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Reference:</label>
-                                                    <div>139374</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="listWrapper">
-                                                <label>Amenities:</label>
-                                                <div class="amenities">
-                                                    <div class="amenitiesList"><div class="dot"></div>Air conditioning </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Cooker </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Washing machine </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Fans </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Swimming pool </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Security service </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Water reservoir </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Refrigerator </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Microwave </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Internet </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Dstv </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Garage </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Annexe (Boys' quarters) </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Roof terrace </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="listingContainer">
-                                    <div class="showWrapper">
-                                        <div class="leftRightWrap">
-                                            <div class="left">
-                                                <img src="img/house.jpeg" width="200px" height="180px" />
-                                            </div>
-                                            <div class="middle">
-                                                <h5>3 bedroom furnished guest house for sale at Achimota</h5>
-                                                <p>
-                                                    Veniam commodo commodo ad duis mollit elit sunt non ea est in.
-                                                </p>
-                                                <h5>₵150,000</h5>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="pending">
-                                                <span>Pending</span>
-                                            </div>
-                                            <div class="stats">
-                                                <span><i class="fa fa-eye" aria-hidden="true"></i> 30</span>
-                                                <span><i class="fa fa-phone" aria-hidden="true"></i> 10</span>
-                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> 5</span>
-                                            </div>
-                                            <div class="actions">
-                                                <button>Edit</button>
-                                                <button>Sold</button>
-                                                <button>Bump</button>
-                                                <button>Delete</button>
-                                            </div>
-                                            <p>Last updated: Oct 20, 2020 04:51 pm</p>
-                                        </div>
-                                    </div>
-                                    <div class="hiddenWrapper">
-                                        <div class="left">
-                                            <img src="img/house.jpeg" width="230px" height="230px" />
-                                            <div class="thumbnails">
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                                <img src="img/house.jpeg" width="50px" height="50px" />
-                                            </div>
-                                        </div>
-                                        <div class="middle">
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Categories:</label>
-                                                    <div>Guest house for Sale</div>
-                                                    <div>Guest house for Sale in Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Commission:</label>
-                                                    <div>20.0 % (GH₵ 24,000)</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                    <div class="listWrapper">
-                                                        <label>Registration fee:</label>
-                                                        <div>GH₵ 50</div>
-                                                    </div>
-                                                    <div class="listWrapper">
-                                                        <label>Bedrooms:</label>
-                                                        <div>3</div>
-                                                    </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Bathrooms:</label>
-                                                    <div>3</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Garage:</label>
-                                                    <div>1</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Furnished:</label>
-                                                    <div>Furnished</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Area:</label>
-                                                    <div>147 m2</div>
-                                                </div>
-                                            </div>
-                                            <div class="listRow">
-                                                <div class="listWrapper">
-                                                    <label>Address:</label>
-                                                    <div>Achimota</div>
-                                                </div>
-                                                <div class="listWrapper">
-                                                    <label>Reference:</label>
-                                                    <div>139374</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="listWrapper">
-                                                <label>Amenities:</label>
-                                                <div class="amenities">
-                                                    <div class="amenitiesList"><div class="dot"></div>Air conditioning </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Cooker </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Washing machine </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Fans </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Swimming pool </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Security service </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Water reservoir </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Refrigerator </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Microwave </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Internet </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Dstv </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Garage </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Annexe (Boys' quarters) </div>
-                                                    <div class="amenitiesList"><div class="dot"></div>Roof terrace </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-    
-                                <!-- End of scroll container -->
+                                <!-- End of all listings -->
                             </div>
                         </div>
     
@@ -1092,12 +785,11 @@
     
                         <div class="tab-pane fade" style="padding-top: 10px;" id="pending-listings" role="tabpanel" aria-labelledby="pending-listings">
                             <div class="container noMargin">
-                                
                                 <div class="listingContainer">
                                     <div class="showWrapper">
                                         <div class="leftRightWrap">
                                             <div class="left">
-                                                <img src="img/house.jpeg" width="200px" height="180px" />
+                                                <img src="img/house.jpeg" />
                                             </div>
                                             <div class="middle">
                                                 <h5>3 bedroom furnished guest house for sale at Achimota</h5>
@@ -1226,6 +918,49 @@
     <script src="js/bootstrap.js"></script>
     <script>
        $(document).ready(function(){
+
+            $('.custom-select-wrapper').on('click', function() {
+                this.querySelector('.custom-select').classList.toggle('open');
+            })
+
+            for (const option of document.querySelectorAll(".custom-option")) {
+                option.addEventListener('click', function() {
+                    if (!this.classList.contains('selected')) {
+                        this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+                        this.classList.add('selected');
+                        this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+                        if(this.textContent=="Commercial Space"||this.textContent=="Office"||this.textContent=="Shop"||this.textContent=="Warehouse"){
+                            $("#commercialExtra").show()
+                        } else {
+                            $("#commercialExtra").hide()
+                        }
+                    }
+                })
+            }
+
+            $("#checkPerMonth, #checkPerWeek, #checkPerDay, #checkServiceCharge").click(function(){
+                if($(this).is(":checked")){
+                    $(this).parent().siblings(".inputField").children("input").removeAttr("disabled")
+                } else {
+                    if($("#rateDurationRow").children().find("input[type='checkbox']").is(":checked")){
+                        $(this).parent().siblings(".inputField").children("input").attr("disabled", true)
+                    } else {
+                        $(this).prop("checked", true)
+                        alert("Sorry, At least one base pricing offer is required")
+                    }
+                }
+            })
+
+            $("#checkCommPercentage, #checkCommMonthly").click(function(){
+                $(this).parent().siblings(".containerContainer").children("input").prop("checked", false)
+            })
+
+            window.addEventListener('click', function(e) {
+                const select = document.querySelector('.custom-select')
+                if (!select.contains(e.target)) {
+                    select.classList.remove('open');
+                }
+            })
             $('.icon-bar').hover(function(){
                $(this).css({
                    width:220
@@ -1354,19 +1089,6 @@
                     alert("Pls select only images");
                 }
             })
-
-            // if(!$(".addedImagesWrapper").data().valueOf.length<1){
-            //     var images = $(".addedImagesWrapper").data().images
-            //     images.each(function(i, val){
-            //         $(".addedImagesWrapper").prepend(
-            //             '<div class="col-md-2 image">\
-            //                 <button class="remove"><i class="fa fa-times-circle" aria-hidden="true"></i></button>\
-            //                 <img width="100%" height="100%" src='+val+' alt=""/>\
-            //                 <button class="change">Change</button>\
-            //             </div>'
-            //         )
-            //     })
-            // }
        })
     </script>
 </body>

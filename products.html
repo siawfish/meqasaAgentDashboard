@@ -27,8 +27,8 @@
     </div>
 
     <div class="container padding">
-        <div class="cardsWrapper">
-            <div class="col-sm-12 col-md-6">
+        <div class="cardsWrapper1">
+            <div class="col-sm-12 col-md-6 alignRight">
                 <div data-link="bumps" class="ff_one style2">
                     <div class="icon"><img src="assets/icons/lightning-fill.svg" alt="" width="30" height="30" title="lightning-fill"></div>
                     <div class="detais">
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 alignRight">
                 <div data-link="premium" class="ff_one style2">
                     <div class="icon"><img src="assets/icons/award.svg" alt="" width="30" height="30" title="award"></div>
                     <div class="detais">
@@ -115,6 +115,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <script>
         $(document).ready(function(){
+
+            $('.icon-bar').hover(function(){
+               $(this).css({
+                   width:220
+               })
+               $('.icon-bar span').css({
+                   display:'inline'
+               })
+               $('.icon-bar a').css({
+                   textAlign:'left'
+               })
+            }, function(){
+                $(this).css({
+                   width:70
+                })
+                $('.icon-bar span').css({
+                    display:'none'
+                })
+                $('.icon-bar a').css({
+                   textAlign:'center'
+               })
+            })
             
             $('.avatarContainer').hover(function(){
                 $('.abs').css({

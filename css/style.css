@@ -10,9 +10,19 @@ body {
     margin-top: 30px;    
 }
 
-.cardsWrapper {
+.cardsWrapper, .cardsWrapper1 {
     display: flex;
     flex-flow: row wrap;
+}
+
+.cardsWrapper1 .ff_one {
+    width: 70%;
+}
+
+.cardsWrapper1 .alignRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .nav-link {
@@ -253,7 +263,7 @@ body {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
     position: fixed;
-    margin-top: 8%;
+    margin-top: 4%;
     height: fit-content;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -497,9 +507,16 @@ body {
     align-items: center;
 }
 
-.listingContainer .left img {
+.listingContainer .showWrapper .left img {
     border-radius: 8px;
     margin-right: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.listingContainer .hiddenWrapper .left img {
+    border-radius: 8px;
+    margin-right: 5px;
 }
 
 .hiddenWrapper .right .amenities {
@@ -582,6 +599,7 @@ body {
     align-self: flex-start;
     flex-direction: column;
     flex: 0.7;
+    margin-right: 5px;
 }
 
 .hiddenWrapper .thumbnails img {
@@ -609,13 +627,12 @@ body {
 .listingContainer .right {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     justify-content: space-between;
     color: rgb(119, 119, 119);
 }
 
 .listingContainer .right .actions {
-    padding: 15px 0 30px;
+    padding: 5px 0 15px;
     display: flex;
     justify-content: flex-end;
 }
@@ -624,6 +641,7 @@ body {
     background-color: #262637;
     color: #fff;
     border: none;
+    font-size: smaller;
     padding: 5px 8px;
     border-radius: 8px;
     font-weight: bold;
@@ -647,22 +665,28 @@ body {
 }
 
 .listingContainer .right .active {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-weight: bold;  
     display: flex;
     justify-content: flex-end;
+}
+
+.listingContainer .right p {
+    margin-bottom: 0;
+    font-size: smaller;
 }
 
 .listingContainer .right .active span {
     border: 2px solid green;
     padding: 0 5px;
     border-radius: 15px;
+    font-size: smaller!important;
     background-color: lightgreen;
     color: #000;
 }
 
 .listingContainer .right .pending {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-weight: bold;  
     display: flex;
     justify-content: flex-end;
@@ -672,6 +696,7 @@ body {
     border: 2px solid #262637;
     padding: 0 5px;
     border-radius: 15px;
+    font-size: smaller!important;
     background-color: #dedefa;
     color: #000;
 }
@@ -683,6 +708,7 @@ body {
 
 .listingContainer .right .stats {
     font-size: 15px;
+    font-weight: 500;
     color: #333;
     display: flex;
     justify-content: flex-end;
@@ -703,9 +729,6 @@ body {
 }
 
 .addListing {
-    position: absolute;
-    top: 8.5%;
-    right:17%;
     background-color: #fd5573;
     color: #fff;
     border: none;
@@ -828,6 +851,10 @@ body {
 .containerContainer input:checked ~ .checkmark {
     background-color: #fd5573;
     border: 2px solid #262637;
+}
+
+#commercialExtra {
+    display: none;
 }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -2561,4 +2588,101 @@ body {
     padding-bottom: 10px;
 }
 
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    font-size: small;
+}
+.custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: #dedefa;
+    border-radius: 8px;
+    font-size: small;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #3b3b3b;
+    background: #ffffff;
+    cursor: pointer;
+}
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 105%;
+    left: 0;
+    right: 0;
+    border: 1px solid #dedefa;
+    border-radius: 8px;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option {
+    position: relative;
+    display: block;
+    color: #3b3b3b;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #dedefa;
+    border-radius: 8px;
+}
+.custom-option.selected {
+    color: #ffffff;
+    background-color: #fd5573;
+    border-radius: 8px;
+}
+.arrow {
+    position: relative;
+    height: 15px;
+    width: 15px;
+}
+.arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+.arrow::before {
+    left: -5px;
+    transform: rotate(45deg);
+    background-color: #262637;
+}
+.arrow::after {
+    left: 5px;
+    transform: rotate(-45deg);
+    background-color: #262637;
+}
+.open .arrow::before {
+    left: -5px;
+    transform: rotate(-45deg);
+}
+.open .arrow::after {
+    left: 5px;
+    transform: rotate(45deg);
+}
 
