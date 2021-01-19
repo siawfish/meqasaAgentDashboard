@@ -37,7 +37,7 @@ h3.agent-section-text.choice{font-size:24.5px}
 input[type=number] {
   padding: 10px 10px;
   box-shadow: none !important;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-color: #e8e8e8;
   font-weight: 300;
   font-family: "Ubuntu", Arial !important;
