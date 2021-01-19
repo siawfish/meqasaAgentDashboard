@@ -277,9 +277,9 @@ footer {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: 1;
-    -webkit-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
-    -moz-box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
-    box-shadow: -1px -1px 15px 6px rgba(238,238,238,1);
+    -webkit-box-shadow: -1px -1px 3px 6px rgba(238,238,238,1);
+    -moz-box-shadow: -1px -1px 3px 6px rgba(238,238,238,1);
+    box-shadow: -1px -1px 3px 6px rgba(238,238,238,1);
 }
 
 .icon-bar a {
@@ -925,6 +925,8 @@ footer li a:hover {padding: 6px 1px;text-decoration: none;color: #fd5573;font-si
     padding: 10px 10px;
     box-shadow: none !important;
     font-weight: 300;
+    width: 300px;
+    margin-right: 10px;
 }
 
 .subscribe-txt {
@@ -2671,10 +2673,6 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 .channel .iconWrapper i {
     font-size: 50px;
     color: #262637;
-}
-
-.channelWrapper {
-    margin-top: 10%;
 }
 
 #err {

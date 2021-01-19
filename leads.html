@@ -6,10 +6,12 @@
     <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sundrzM.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Agent Leads</title>
 </head>
 <body>
+    <div id="header"></div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -287,68 +289,73 @@
             </div>
         </div>
     </div>
+    <div id="footer"></div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#header").load("header.html")
+            $("#footer").load("footer.html")
+            $('.icon-bar').hover(function(){
+                $(this).css({
+                    width:220
+                })
+                $('.icon-bar span').css({
+                    display:'inline'
+                })
+                $('.icon-bar a').css({
+                    textAlign:'left'
+                })
+            }, function(){
+                $(this).css({
+                    width:70
+                })
+                $('.icon-bar span').css({
+                    display:'none'
+                })
+                $('.icon-bar a').css({
+                    textAlign:'center'
+                })
+            })
+
+            $(".clickToView button").click(function(){
+                $(this).parent(".clickToView").fadeOut('slow')
+                $(this).parent(".clickToView").next(".chatContainer").css({
+                    display:"flex"
+                })
+                $(this).parent(".clickToView").parent(".mid").next().fadeIn('slow')
+            })
+
+            $(".chatContainer").hover(function(){
+                $(this).children('button').show('slow')
+            }, function(){
+                $(this).children('button').hide('slow')
+            })
+
+            $(".chatContainer button").click(function(){
+                $(this).parent(".chatContainer").siblings('.clickToView').show()
+                $(this).parent(".chatContainer").css({
+                    display:"none"
+                })
+                $(this).parent(".chatContainer").parent(".mid").next().hide()
+            })
+
+            $('#all-leads').on('click', function (e) {
+                e.preventDefault()
+                $(".tab-content #all-leads").addClass("show active").siblings().removeClass("show active")
+            })
+
+            $('#message-leads').on('click', function (e) {
+                e.preventDefault()
+                $(".tab-content #message-leads").addClass("show active").siblings().removeClass("show active")
+            })
+
+            $('#phone-leads').on('click', function (e) {
+                e.preventDefault()
+                $(".tab-content #phone-leads").addClass("show active").siblings().removeClass("show active")
+            })
+        })
+    </script>
 </body>
-<script src="js/jquery-3.5.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script>
-    $('.icon-bar').hover(function(){
-        $(this).css({
-            width:220
-        })
-        $('.icon-bar span').css({
-            display:'inline'
-        })
-        $('.icon-bar a').css({
-            textAlign:'left'
-        })
-    }, function(){
-        $(this).css({
-            width:70
-        })
-        $('.icon-bar span').css({
-            display:'none'
-        })
-        $('.icon-bar a').css({
-            textAlign:'center'
-        })
-    })
-
-    $(".clickToView button").click(function(){
-        $(this).parent(".clickToView").fadeOut('slow')
-        $(this).parent(".clickToView").next(".chatContainer").css({
-            display:"flex"
-        })
-        $(this).parent(".clickToView").parent(".mid").next().fadeIn('slow')
-    })
-
-    $(".chatContainer").hover(function(){
-        $(this).children('button').show('slow')
-    }, function(){
-        $(this).children('button').hide('slow')
-    })
-
-    $(".chatContainer button").click(function(){
-        $(this).parent(".chatContainer").siblings('.clickToView').show()
-        $(this).parent(".chatContainer").css({
-            display:"none"
-        })
-        $(this).parent(".chatContainer").parent(".mid").next().hide()
-    })
-
-    $('#all-leads').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #all-leads").addClass("show active").siblings().removeClass("show active")
-    })
-
-    $('#message-leads').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #message-leads").addClass("show active").siblings().removeClass("show active")
-    })
-
-    $('#phone-leads').on('click', function (e) {
-        e.preventDefault()
-        $(".tab-content #phone-leads").addClass("show active").siblings().removeClass("show active")
-    })
-</script>
 </html>
