@@ -259,11 +259,20 @@ body {
     font-size: 14px;
 }
 
+footer {  
+    width: 100%;  
+    float: left;  
+    background-color: #fafafa;  
+    padding: 70px 0;  
+    position: relative;
+}
+
 .icon-bar {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
-    position: fixed;
-    margin-top: 4%;
+    position: absolute;
+    top: 40%;
+    /* margin-top: 4%; */
     height: fit-content;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -856,7 +865,93 @@ body {
 #commercialExtra {
     display: none;
 }
-  
+
+#header-logo{display:inline;visibility:hidden}
+.btn.btn-blue{border:1px solid #262637;background:#262637;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none}
+.bootstrap-select .btn{border:2px solid #e8e8e8}
+#top-header{background:#262637;padding:8px 50px}
+#top-header a{color:white}
+#top-header a:hover{color:white;text-decoration:underline}
+#top-header .menu-text{color:white}
+#top-header .menu-text i{color:white}
+#top-header .menu-text-bd{border-right:1px solid white}
+#top-header .menu-text-bd:last-child{border-right:none}
+#top-header a.btn.btn-blue{background-color:#fd5573 !important;border:none}
+#top-header a.btn.btn-blue:hover{background-color:#e9e9eb !important;text-decoration:none}
+#top-header .hd-phone{background-image:url("assets2/images/phone-icon.png")}
+#top-header .hd-envelope{background-image: url("assets2/images/contact-y.png");background-size:13px auto}
+.main-nav-outer{background-color:#f8f8f8;border-color:#f8f8f8}
+.main-nav-outer .main-nav li a{color:#262637}
+.main-nav li a:hover,.main-nav li a:focus{color:#ffffff;background-color:#fd5573}
+.main-nav.nav > li > a:hover,.main-nav.nav > li > a:focus{color:#ffffff;background-color:#fd5573}
+.main-nav-outer .navbar-right .dropdown-menu li a:hover{background:#fd5573}
+.middle-header a,.main-nav-outer a,#top-header a,#top-header .menu-text strong{color:#ffffff}
+#subscribe{background:#262637}
+.subscribe-btn{
+    background-color:#fd5573;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    border: none;
+    padding: 10px 20px !important;
+    color: #fff;
+}
+#c7ft {
+    display: flex;
+    flex-direction: row;
+}
+.subscribe-btn:hover{background-color:#e9e9eb;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none}
+.scrollup{background:#262637}
+.scrollup:hover{background:#262637}
+.cat-text{color:#262637}
+#sub-footer .copyright p{color:#262637}
+footer a:hover{color:#fd5573}
+footer li a:hover{color:#fd5573}
+footer h2.cat-text a:hover{color:#fd5573}
+ul.site-links li a{color:#262637}
+ul.site-links li a:hover{color:#fd5573}
+.modal-header{border-bottom:4px solid #262637}
+img[vd]{border:medium none}
+.modal-header h4{color:#262637}
+.bootstrap-select.btn-group .dropdown-menu li a:hover{background-color:#fd5573!important}
+#veratip a{color:#262637}
+footer li a {padding: 6px 1px;text-decoration: none;color: #333;font-size: 15px; font-weight: bold;}
+footer li a:hover {padding: 6px 1px;text-decoration: none;color: #fd5573;font-size: 15px;}
+.nav.navbar-right{float:none!important}
+.subscribe-input{
+    border:2px solid #e8e8e8!important;
+    background-color: #fff4f1;
+    color: #f66442;
+    padding: 10px 10px;
+    box-shadow: none !important;
+    font-weight: 300;
+}
+
+.subscribe-txt {
+    color: #fff;
+    margin: 0px;
+    padding-left: 43px;
+    font-weight: normal;
+}
+footer ul {
+    list-style: none;
+    padding:0
+}
+ul.site-links2, ul.site-links {
+    padding: 0px 0;
+}
+#sub-footer {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    background-color:#e9e9eb;
+    border-top:1px solid #e9e9eb
+}
+ul.site-links2 li, ul.site-links li {display: inline;    padding: 0 6px;}
+#sub-footer .social-icons a {  display: inline-block;  text-transform: capitalize;  margin-left: 8px;}
+#sub-footer .social-icons a img { width: 32px;  height: 32px; }
+footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transform: uppercase; font-weight: bold;}
+.widget li a, footer li a {  color: #333;  text-decoration: none;  display: block;  font-weight: 300;  -webkit-transition: all 0.4s ease-in-out;  -moz-transition: all 0.4s ease-in-out;  -o-transition: all 0.4s ease-in-out;  -ms-transition: all 0.4s ease-in-out;  transition: all 0.4s ease-in-out;}
   /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";

@@ -5,11 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/style4.css"> -->
+    <link rel="stylesheet" href="css/sundrzM.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Agent Dashboard</title>
 </head>
 <body>
+
+    <div class="wrap" id="top-header" style="top: 0px;">
+        <div class="container-fluid" style="margin:0 30px">
+            <div class="row">
+                    <div class="col-6"> 
+                        <ul class="main-nav navbar-left"> 
+                            <li class="menu-text"><strong><a href="https://meqasa.com/logout">Log out</a></strong></li>
+                            <li class="menu-text"><strong>Logged in as: <a href="https://meqasa.com/dashboard">Gerald Amanor</a></strong></li>
+                        </ul>
+                    </div>
+                    <div class="col-6"> 
+                        <ul class="main-nav navbar-right menu-ul"> 
+                            <li class="menu-text menu-text-bd"><a href="https://meqasa.com/dashboard">Go to dashboard</a></li>						
+                            <li class="menu-text menu-text-bd"><a href="https://meqasa.com/list-your-property" class="btn btn-blue">List Property</a></li>
+                            <li style="display:inline-block">
+                                <div id="ogtpgn">
+                                    <div class="skiptranslate goog-te-gadget" dir="ltr">
+                                        <div id=":0.targetLanguage">
+                                            <select class="goog-te-combo" aria-label="Language Translate Widget">
+                                                <option value="">Select Language</option><option value="af">Afrikaans</option>
+                                                <option value="sq">Albanian</option><option value="am">Amharic</option>
+                                                <option value="ar">Arabic</option><option value="hy">Armenian</option>
+                                                <option value="az">Azerbaijani</option><option value="eu">Basque</option>
+                                                <option value="be">Belarusian</option><option value="bn">Bengali</option>
+                                                <option value="bs">Bosnian</option><option value="bg">Bulgarian</option>
+                                                <option value="ca">Catalan</option><option value="ceb">Cebuano</option>
+                                                <option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option>
+                                                <option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option>
+                                                <option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option>
+                                                <option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option>
+                                                <option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option>
+                                                <option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option>
+                                                <option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option>
+                                                <option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option>
+                                                <option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option>
+                                                <option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option>
+                                                <option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option>
+                                                <option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option>
+                                                <option value="kk">Kazakh</option><option value="km">Khmer</option><option value="rw">Kinyarwanda</option>
+                                                <option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option>
+                                                <option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option>
+                                                <option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option>
+                                                <option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option>
+                                                <option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option>
+                                                <option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option>
+                                                <option value="no">Norwegian</option><option value="or">Odia (Oriya)</option><option value="ps">Pashto</option>
+                                                <option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option>
+                                                <option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option>
+                                                <option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option>
+                                                <option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option>
+                                                <option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option>
+                                                <option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option>
+                                                <option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option>
+                                                <option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option>
+                                                <option value="th">Thai</option><option value="tr">Turkish</option><option value="tk">Turkmen</option>
+                                                <option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option>
+                                                <option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option>
+                                                <option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option>
+                                                <option value="zu">Zulu</option>
+                                            </select>
+                                        </div>
+                                        Powered by 
+                                        <span style="white-space:nowrap">
+                                            <a class="goog-logo-link" href="https://translate.google.com/" target="_blank">
+                                                <img src="./img/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">
+                                                Translate
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <script>
+                                    function gtinit(){new google.translate.TranslateElement({pageLanguage: 'en'}, 'ogtpgn');}
+                                </script>
+                            </li> 
+                            <style>#MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1gn select{height:unset;width:unset;margin:unset}</style>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-header">
+        <div class="container" style="margin:0 30px">
+            <div class="row">
+                <div class="col"> 
+                    <a class="navbar-brand"><img src="./img/meqasa-logo-final-transparent.png" style="width:368px" alt="meQasa Real Estate Marketplace - the easiest way to rent buy and sell property in Ghana"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav-outer" id="site-nav">
+        <div class="container" style="margin:0">
+            <!-- <a class="navbar-brand" href="https://meqasa.com/" id="header-logo" style="visibility:hidden"><img src="./List your property_files/meqasa-logo-0.png" style="height:41px" alt="meQasa Real Estate Marketplace - the easiest way to rent buy and sell property in Ghana"></a> -->
+            <ul class="nav main-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="https://meqasa.com/properties-for-rent-in-ghana">For Rent</a>
+                    <ul class="dropdown-menu sub-menu" style="width:200px">
+                        <li>
+                            <a href="https://meqasa.com/apartments-for-rent-in-Accra">Apartments For Rent</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/houses-for-rent-in-ghana">Houses For Rent in Ghana</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/offices-for-rent-in-Accra">Office Spaces</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/houses-for-rent-in-Accra">Houses for rent in Accra</a>
+                        </li>             
+                        <li>
+                            <a href="https://meqasa.com/rented-properties">Rented Properties</a>
+
+                        </li>             
+                    </ul>                            
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="https://meqasa.com/properties-for-sale-in-ghana">For Sale</a>
+                    <ul class="dropdown-menu sub-menu">
+                        <li>
+                            <a href="https://meqasa.com/apartments-for-sale-in-Accra">Apartments For Sale</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/houses-for-sale-in-ghana">Houses For Sale</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/offices-for-sale-in-Accra">Office Spaces</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/sold-properties">Sold properties</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                        <a href="https://meqasa.com/real-estate-developments">Developments</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="https://meqasa.com/real-estate-agents">Agents</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="https://meqasa.com/real-estate-developers">Developers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="https://blog.meqasa.com/">Blog</a>
+                    <ul class="dropdown-menu sub-menu">
+                        <li>
+                            <a href="https://meqasa.com/blog/category/press-and-events/">Press &amp; Events</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/blog/category/real-estate-news/">Real Estate News</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/blog/category/living-in-neighbourhood-series/">Living In ...</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="https://blog.meqasa.com/category/tips-and-advice/">Advice</a>
+                    <ul class="dropdown-menu sub-menu" style="width:220px">
+                        <li>
+                            <a href="https://blog.meqasa.com/category/tips-and-advice/">Real Estate Advice &amp; Tips</a>
+                        </li>
+                        <li>
+                            <a href="https://meqasa.com/accra-housing-guide">meQasa Accra Housing Guide</a></li><li><a href="https://meqasa.com/real-estate-report">Real Estate Report 2020</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                        <a href="https://meqasa.com/lands-for-sale-in-ghana">Land</a>
+                </li> 
+            </ul>
+            <a class="mobile-nav-ck" href="https://meqasa.com/list-your-property#"><i class="fa fa-bars"></i></a>
+        </div>
+    </nav>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Products</li>
@@ -26,7 +203,7 @@
         <a href="subscriptions.html"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
     </div>
 
-    <div class="container padding">
+    <div class="container padding" style="margin-top: 0;">
         <div class="cardsWrapper1">
             <div class="col-sm-12 col-md-6 alignRight">
                 <div data-link="bumps" class="ff_one style2">
@@ -107,8 +284,144 @@
 
         </div>
     </div>
-
-
+    <section id="subscribe" style="padding:20px 0">
+        <section class="container">
+            <section class="row">
+                <div class="col-5"></div>
+                <div class="col-7">
+                    <div class="post-37">
+                       <h3 class="subscribe-txt" style="padding-left:0">Get Property Alerts from meQasa</h3>
+                        <div style="display:block;margin-top:12px">
+                            <form id="c7ft">
+                                <input name="skrmlft" type="email" id="skrmlft" class="col-7 subscribe-input" placeholder="Enter Your Email" required="">
+                                <button class="btn subscribe-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <section class="container">
+            <section class="row">
+                <div class="col footer-widget widget_text">
+                    <h2 class="cat-text"><a href="https://meqasa.com/offices-for-rent-in-ghana" title="Office spaces for rent in Ghana">Office Spaces</a></h2>
+                    <ul>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Accra">Accra</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Osu">Osu</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Spintex">Spintex Road</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Dzorwulu">Dzorwulu</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Airport%20Area">Airport Area</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-East%20Legon">East Legon</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Cantonments">Cantonments</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/offices-for-rent-in-Tesano">Tesano</a></li>
+                    </ul>   
+                </div>
+                <div class="col footer-widget widget_pages">
+                    <h2 class="cat-text"><a href="https://meqasa.com/apartments-for-rent-in-ghana" title="Apartments for rent in Ghana">Apartments for Rent</a></h2>        
+                    <ul>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Accra">Accra</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Airport%20Area">Airport Area</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-East%20Legon">East Legon</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Cantonments">Cantonments</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Osu">Osu</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Dzorwulu">Dzorwulu</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Spintex">Spintex Road</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/apartments-for-rent-in-Labone">Labone</a></li>
+                    </ul>   
+                </div>
+                <div class="col footer-widget widget_pages">
+                    <h2 class="cat-text"><a href="https://meqasa.com/houses-for-sale-in-ghana" title="Houses for sale in Ghana">Houses for Sale</a></h2>      
+                    <ul>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Accra">Accra</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-East%20Legon">East Legon</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Spintex">Spintex Road</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Airport%20Hills">Airport Hills</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Kasoa">Kasoa</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Kwabenya">Kwabenya</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Airport%20Area">Airport Area</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-sale-in-Adjiringanor">Adjiringanor</a></li>
+                    </ul>   
+                </div>
+                <div class="col footer-widget widget_pages">
+                    <h2 class="cat-text"><a href="https://meqasa.com/houses-for-rent-in-ghana" title="Houses for rent in Ghana">Houses for Rent</a></h2>      
+                    <ul>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Accra">Accra</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-East%20Legon">East Legon</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Cantonments">Cantonments</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Spintex">Spintex</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Airport%20Area">Airport Area</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Dzorwulu">Dzorwulu</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Airport%20Hills">Airport Hills</a></li>
+                        <li class="page_item"><a href="https://meqasa.com/houses-for-rent-in-Labone">Labone</a></li>
+                    </ul>   
+                </div>
+            </section>
+        </section>
+    </footer>
+    <section id="sub-footer">
+        <section class="container">
+            <section class="row">
+                <div class="col-md-6">
+                   <ul class="site-links">
+                       <li>
+                            <a href="https://meqasa.com/about-us">About Us</a>
+                       </li>
+                       <li>
+                            <a href="https://meqasa.com/contact-us">Contact Us</a>
+                       </li>
+                       <li>
+                            <a href="https://meqasa.com/faq">FAQs</a>
+                       </li>
+                        <li>
+                            <a href="https://meqasa.com/feedback">Feedback</a>
+                        </li>
+                       <li>
+                            <a href="https://meqasa.com/accra-housing-guide">Housing Guide</a></li><li><a href="https://meqasa.com/real-estate-report">Real Estate Report 2020</a>
+                       </li>
+                       <li>
+                            <a href="https://meqasa.com/advertising-options-with-meqasa" style="white-space:nowrap">Advertise with Us</a></li><li><a href="https://meqasa.com/terms-of-use">Terms of Use</a>
+                       </li>
+                   </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="copyright">
+                        <p>
+                            © 2021 meQasa – Real Estate Marketplace.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2" style="padding: 0;">
+                    <div class="social-icons">
+                        <ul class="site-links2">
+                           <li>
+                                <a target="_blank" rel="noreferrer" href="http://www.twitter.com/meqasa">
+                                    <img src="./img/tw.png" alt="meQasa on Twitter">
+                                </a>
+                           </li>
+                           <li>
+                                <a target="_blank" rel="noreferrer" href="http://www.linkedin.com/company/meqasa-ltd-meqasa-com-">
+                                    <img src="./img/lk.png" alt="meQasa LinkedIn company profile">
+                                </a>
+                           </li>
+                           <li>
+                                <a target="_blank" rel="noreferrer" href="http://www.facebook.com/meqasa">
+                                    <img src="./img/fb.png" alt="meQasa facebook page">
+                                </a>
+                           </li>
+                           <li>
+                                <a target="_blank" rel="noreferrer" href="http://instagram.com/meqasa_gh">
+                                    <img src="./img/inst.png" alt="meQasa on Instagram">
+                                </a>
+                           </li>
+                        </ul>
+                      </div>                                                        
+                   </div>
+                
+            </section>
+        </section>
+    </section>  
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
