@@ -688,6 +688,28 @@ footer {
     display: none;
 }
 
+.isChecked {
+    display: none;
+}
+
+.check {
+    display: block;
+}
+
+.extraPaymentPlan {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.extraPaymentPlan label {
+    margin-right: 10px;
+    flex: 1;
+}
+
 .label {
     font-weight: bolder;
     text-align: left;
@@ -1062,27 +1084,39 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 
 .image .remove {
     position: absolute;
-    top: 8px;
+    top: 4px;
     right: 8px;
-    border-radius: 4px;
-    background-color: #262637;
+    background-color: rgb(255, 210, 210);
     border: none;
+    border-radius: 4px;
+}
+
+.image .coverPhoto {
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    background-color: rgb(217, 248, 217);
+    color: #2ECC71;
+    border-radius: 4px;
+    font-weight: 500;
+    border: none;
+    display: none;
 }
 
 .image .remove i {
-    color: red;
+    color: rgb(252, 82, 82);
 }
 
 .image .change {
     position: absolute;
-    bottom: 8px;
+    bottom: 4px;
     left: 18px;
     border-radius: 4px;
-    background-color: #262637;
+    background-color: #dedefa;
     border: none;
-    color: #fd5573;
-    font-size: smaller;
-    font-weight: bold;
+    color: #262637;
+    font-size: x-small;
+    font-weight: 500;
 }
 
 .addImage i {

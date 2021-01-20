@@ -120,7 +120,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="row">
-                                        <div class="col">
+                                        <div id="officeChecklist" class="col">
                                             <div class="checkboxField">
                                                 <label class="containerContainer">Furnished
                                                     <input id="furnished" type="checkbox">
@@ -175,6 +175,35 @@
                                             <input id="perMonthRate" type="number" />
                                         </div>
                                     </div>
+                                    <div class="isChecked check">
+                                        <label class="label" for="Pricing Offers">Select the lease periods available*</label>
+                                        <div class="extraPaymentPlan">
+                                            <label class="containerContainer">24 months
+                                                <input id="uncompleted" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            
+                                            <label class="containerContainer">12 months
+                                                <input id="parkingSpace" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            
+                                            <label class="containerContainer">6 months
+                                                <input id="newlyBuilt" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                            <label class="containerContainer">3 months
+                                                <input id="parkingSpace" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            
+                                            <label class="containerContainer">1 months
+                                                <input id="newlyBuilt" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col">
                                     <div class="checkboxField">
@@ -184,6 +213,20 @@
                                         </label>
                                         <div class="inputField">
                                             <input id="perWeekRate" disabled type="number" />
+                                        </div>
+                                    </div>
+                                    <div class="isChecked">
+                                        <label class="label" for="Pricing Offers">Select the lease periods available*</label>
+                                        <div class="extraPaymentPlan">
+                                            <label class="containerContainer">2 weeks
+                                                <input id="uncompleted" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            
+                                            <label class="containerContainer">1 week
+                                                <input id="parkingSpace" type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -958,8 +1001,10 @@
                         this.classList.add('selected');
                         this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
                         if(this.textContent=="Commercial Space"||this.textContent=="Office"||this.textContent=="Shop"||this.textContent=="Warehouse"){
+                            $("#officeChecklist").hide()
                             $("#commercialExtra").show()
                         } else {
+                            $("#officeChecklist").show()
                             $("#commercialExtra").hide()
                         }
                     }
@@ -968,9 +1013,11 @@
 
             $("#checkPerMonth, #checkPerWeek, #checkPerDay, #checkServiceCharge").click(function(){
                 if($(this).is(":checked")){
+                    $(this).parents(".checkboxField").siblings(".isChecked").addClass("check")
                     $(this).parent().siblings(".inputField").children("input").removeAttr("disabled")
                 } else {
                     if($("#rateDurationRow").children().find("input[type='checkbox']").is(":checked")){
+                        $(this).parents(".checkboxField").siblings(".isChecked").removeClass("check")
                         $(this).parent().siblings(".inputField").children("input").attr("disabled", true)
                     } else {
                         $(this).prop("checked", true)
@@ -1086,6 +1133,17 @@
 
                 var imgPath = $(this)[0].value;
                 var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+                function renderImage(source,i){
+                    console.log("item",i);
+                    return (
+                        '<div class="col-md-2 image">\
+                            <button id='+i+' class="coverPhoto">Cover photo</button>\
+                            <button class="remove"><i class="fa fa-times-circle" aria-hidden="true"></i></button>\
+                            <img width="100%" height="100%" src='+source+' alt=""/>\
+                            <button class="change">Change</button>\
+                        </div>'
+                    )
+                }
 
                 if (extn == "png" || extn == "jpg" || extn == "jpeg") {
                     if (typeof (FileReader) != "undefined") {
@@ -1093,13 +1151,7 @@
                         for (var i = 0; i < countFiles; i++) {
                             var reader = new FileReader();
                             reader.onload = function (e) {
-                                $(".addedImagesWrapper").prepend(
-                                    '<div class="col-md-2 image">\
-                                        <button class="remove"><i class="fa fa-times-circle" aria-hidden="true"></i></button>\
-                                        <img width="100%" height="100%" src='+e.target.result+' alt=""/>\
-                                        <button class="change">Change</button>\
-                                    </div>'
-                                )
+                                $(".addedImagesWrapper").prepend(renderImage(e.target.result,i))
                                 $(".image .remove").click(function(){
                                     $(this).parent(".image").remove()
                                 })
@@ -1116,6 +1168,10 @@
                 } else {
                     alert("Pls select only images");
                 }
+            })
+
+            $(".addedImagesWrapper").bind("DOMSubtreeModified", function(){
+                $("#0").show()
             })
        })
     </script>
