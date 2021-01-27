@@ -351,9 +351,9 @@
             })
 
             $('#activate').click(function(){
-                if($('.dropdown-menu').is(":visible")){
-                    $('.dropdown-menu').slideUp('slow')
-                } else $('.dropdown-menu').slideDown('slow')
+                if($(this).next('.dropdown-menu').is(":visible")){
+                    $(this).next('.dropdown-menu').slideUp('slow')
+                } else $(this).next('.dropdown-menu').slideDown('slow')
             })
 
             $('#activateNow').on('show.bs.modal', function (event) {
