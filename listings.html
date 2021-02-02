@@ -1089,7 +1089,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="close" class="btn btn-primary">Return</button>
+                    <button type="button" id="close" class="btn btn-primary">Close</button>
                     <button type="button" id="schedule" class="btn btn-primary"></button>
                     <button type="button" id="accept" class="btn btn-primary"></button>
                 </div>
@@ -1209,6 +1209,8 @@
             })
 
             $(".modal-footer #close").click(function(){
+                $("#confirmationPrompt .modal-footer #accept").hide()
+                $("#confirmationPrompt .modal-footer #schedule").hide()
                 $("#confirmationPrompt").hide()
             })
 
