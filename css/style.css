@@ -2862,3 +2862,13 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
     transform: rotate(45deg);
 }
 
+#accept {
+    display: none;
+    background-color: #fd5573!important;
+}
+
+#schedule {
+    display: none;
+    background-color: #999999!important;
+}
+
