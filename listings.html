@@ -1067,9 +1067,18 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <p></p>
+                    <div class="modalCheckbox">
+                        <label class="containerContainer">Is the property sold?
+                            <input id="propertySold" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                     <div style="display: none;" class="scheduleRow row">
                         <div class="col">
                             <div class="inputField">
@@ -1182,6 +1191,9 @@
 
             $(".delete").click(function(e){
                 $("#confirmationPrompt .modal-title").html("Delete property")
+                $("#confirmationPrompt .modal-body .modalCheckbox").css({
+                    display:"flex"
+                })
                 $("#confirmationPrompt .modal-body p").html("Are you sure you want to delete this property?").css({
                     textAlign:"center"
                 })
@@ -1208,18 +1220,31 @@
                 }
             })
 
-            $(".modal-footer #close").click(function(){
+            $(".modal-footer #close, .modal-header .btn-close").click(function(){
+                $(".scheduleRow").hide()
+                $(".modal-body #propertySold").prop("checked", false)
+                $("#confirmationPrompt .modal-body .modalCheckbox").hide()
                 $("#confirmationPrompt .modal-footer #accept").hide()
                 $("#confirmationPrompt .modal-footer #schedule").hide()
                 $("#confirmationPrompt").hide()
             })
 
+            $(".modal-body #propertySold").click(function(){
+                if($(this).is(":checked")){
+                    $("#confirmationPrompt .modal-footer #accept").show().html("Mark sold")
+                } else {
+                    $("#confirmationPrompt .modal-footer #accept").show().html("Delete")
+                }
+            })
+
             $(".modal-footer #schedule").click(function(){
                 if($(".scheduleRow").is(":hidden")){
+                    $(this).html("Cancel schedule")
                     $(".scheduleRow").css({
                         display:"flex"
                     })
                 } else {
+                    $(this).html("Schedule")
                     $(".scheduleRow").css({
                         display:"none"
                     })

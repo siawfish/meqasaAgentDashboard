@@ -2867,6 +2867,13 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
     background-color: #fd5573!important;
 }
 
+.modal-body .modalCheckbox {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
 #schedule {
     display: none;
     background-color: #999999!important;
