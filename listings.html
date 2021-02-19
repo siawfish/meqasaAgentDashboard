@@ -492,12 +492,12 @@
                                         <div class="actionsWrapper">
                                             <small>Last updated: Oct 20, 2020 04:51 pm</small>
                                             <div class="actions">
-                                                <button class="edit"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="sold"><i class="fa fa-check-square" aria-hidden="true"></i>Sold</button>
                                                 <button class="bump"><i class="fa fa-bolt" aria-hidden="true"></i>Bump</button>
                                                 <button class="topAd"><i class="fa fa-certificate" aria-hidden="true"></i>Top Ad</button>
                                                 <button class="premium"><i class="fa fa-trophy" aria-hidden="true"></i>Premium</button>
                                                 <button class="premiumPlus"><i class="fa fa-trophy" aria-hidden="true"></i>Premium +</button>
+                                                <button class="editListing"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="delete" style="border-right: none;"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
                                             </div>
                                         </div>
@@ -633,12 +633,12 @@
                                         <div class="actionsWrapper">
                                             <small>Last updated: Oct 20, 2020 04:51 pm</small>
                                             <div class="actions">
-                                                <button class="edit"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="sold"><i class="fa fa-check-square" aria-hidden="true"></i>Sold</button>
                                                 <button class="bump"><i class="fa fa-bolt" aria-hidden="true"></i>Bump</button>
                                                 <button class="topAd"><i class="fa fa-certificate" aria-hidden="true"></i>Top Ad</button>
                                                 <button class="premium"><i class="fa fa-trophy" aria-hidden="true"></i>Premium</button>
                                                 <button class="premiumPlus"><i class="fa fa-trophy" aria-hidden="true"></i>Premium +</button>
+                                                <button class="editListing"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="delete" style="border-right: none;"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
                                             </div>
                                         </div>
@@ -791,12 +791,12 @@
                                         <div class="actionsWrapper">
                                             <small>Last updated: Oct 20, 2020 04:51 pm</small>
                                             <div class="actions">
-                                                <button class="edit"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="sold"><i class="fa fa-check-square" aria-hidden="true"></i>Sold</button>
                                                 <button class="bump"><i class="fa fa-bolt" aria-hidden="true"></i>Bump</button>
                                                 <button class="topAd"><i class="fa fa-certificate" aria-hidden="true"></i>Top Ad</button>
                                                 <button class="premium"><i class="fa fa-trophy" aria-hidden="true"></i>Premium</button>
                                                 <button class="premiumPlus"><i class="fa fa-trophy" aria-hidden="true"></i>Premium +</button>
+                                                <button class="editListing"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="delete" style="border-right: none;"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
                                             </div>
                                         </div>
@@ -938,12 +938,12 @@
                                         <div class="actionsWrapper">
                                             <small>Last updated: Oct 20, 2020 04:51 pm</small>
                                             <div class="actions">
-                                                <button class="edit"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="sold"><i class="fa fa-check-square" aria-hidden="true"></i>Sold</button>
                                                 <button class="bump"><i class="fa fa-bolt" aria-hidden="true"></i>Bump</button>
                                                 <button class="topAd"><i class="fa fa-certificate" aria-hidden="true"></i>Top Ad</button>
                                                 <button class="premium"><i class="fa fa-trophy" aria-hidden="true"></i>Premium</button>
                                                 <button class="premiumPlus"><i class="fa fa-trophy" aria-hidden="true"></i>Premium +</button>
+                                                <button class="editListing"><i class="fa fa-pencil-square" aria-hidden="true"></i>Edit</button>
                                                 <button class="delete" style="border-right: none;"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
                                             </div>
                                         </div>
@@ -1318,7 +1318,7 @@
                 }
             })
 
-            $(".addListing").click(function(){
+            $(".addListing, .editListing").click(function(){
                 $(".listingsWrapper").slideUp("slow")
                 $(".addListingsWrapper").slideDown("slow")
                 $("#b1").css({
