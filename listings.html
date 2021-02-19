@@ -435,7 +435,6 @@
                 </div>
                 <div id="b2" class="actionsWrapper">
                     <button id="previousListing"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</button>
-                    <button>Submit <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
                 </div>
                
                 <div class="listingsWrapper">
@@ -1186,6 +1185,15 @@
                 })
                 $("#confirmationPrompt .modal-footer #accept").show().html("Activate Premium+")
                 $("#confirmationPrompt .modal-footer #schedule").show().html("Schedule Premium+")
+                $("#confirmationPrompt").show()
+            })
+
+            $(".submitListing").click(function(e){
+                $("#confirmationPrompt .modal-title").html("Listing Added")
+                $("#confirmationPrompt .modal-body p").html("Your listing has been submitted for review.").css({
+                    textAlign:"center"
+                })
+                $("#confirmationPrompt .modal-footer #accept").show().html("Okay")
                 $("#confirmationPrompt").show()
             })
 
