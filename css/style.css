@@ -17,6 +17,32 @@ body {
 
 .cardsWrapper1 .ff_one {
     width: 100%;
+    padding: 20px;
+}
+
+.alert {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.alert button {
+    background-color: transparent!important;
+    outline: none!important;
+    color: #fd5573;
+    text-decoration: underline;
+    font-size: small;
+    padding: 0!important;
+    margin: 0 0 0 5px!important;
+}
+
+.alert button:hover{
+    color: #262637;
+}
+
+.alert button:focus {
+    color: #fd5573;
+    outline: 0!important;
 }
 
 .cardsWrapper1 .alignRight {
@@ -1137,7 +1163,7 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 150px;
     outline: none;
     opacity: 0;
 }
@@ -2890,5 +2916,22 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 #schedule {
     display: none;
     background-color: #999999!important;
+}
+
+#verificationPrompt .modal-header h4 {
+    text-align: center;
+}
+
+#verificationPrompt .modal-body p {
+    text-align: center;
+}
+
+#verificationPrompt .modal-body select {
+    margin: 20px 5px;
+}
+
+#verificationPrompt .modal-body .title {
+    font-weight: 700;
+    color: #262637;
 }
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/sundrzM.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,8 +17,10 @@
             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
         </ol>
     </nav>
-
     <div class="container-fluid padding">
+        <div class="alert alert-warning" role="alert">
+                You are not verified. <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#verificationPrompt"> Fix this</button>
+        </div>
         <div class="greeting">
             <img src="img/company-placeholder.jpg" alt="">
             <div class="infoWrapper">
@@ -211,10 +214,65 @@
 
     <div id="footer"></div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="verificationPrompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Submit documents to confirm your account information</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Verification entails transparency and communicates your credibility as a real estate professional to property seekers. <a href="#">Learn more about verification.</a>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="title">
+                                Personal Verification
+                            </div>
+                            <div class="addImage">
+                                <input type="file" multiple accept="image/jpeg, image/png" />
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <small>Click / Drop photo here</small>
+                            </div>
+                            <select class="form-control">
+                                <option>Select ID Type</option>
+                                <option>Passport</option>
+                                <option>Driver's License</option>
+                                <option>National ID</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="title">
+                                Business Verification
+                            </div>
+                            <div class="addImage">
+                                <input type="file" multiple accept="image/jpeg, image/png" />
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <small>Click / Drop photo here</small>
+                            </div>
+                            <select class="form-control">
+                                <option>Select ID Type</option>
+                                <option>Certificate to Commence Business</option>
+                                <option>Business Incorporation Certificate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <script>
         $(document).ready(function(){
             $("#header").load("header.html")
@@ -248,6 +306,9 @@
                 window.location.replace('profile.html')
             })
             
+            $(".modal-header .btn-close").click(function(){
+                $('#verificationPrompt').modal('toggle')
+            })
         })
     </script>
 </body>
