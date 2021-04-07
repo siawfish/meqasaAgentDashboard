@@ -311,7 +311,7 @@ footer {
     width: 70px; /* Set a specific width */
     background-color: #262637; /* Dark-grey background */
     position: absolute;
-    top: 40%;
+    top: 33%;
     /* margin-top: 4%; */
     height: fit-content;
     border-top-right-radius: 5px;
@@ -2935,3 +2935,48 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
     color: #262637;
 }
 
+#verificationPrompt .addImage {
+    width: 98%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.addEmployee {
+    background-color: #dedefa;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.addEmployee i {
+    color: #fd5573;
+    font-size: 30px;
+}
+
+.employee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin-bottom: 5px;
+}
+
+.employee .name {
+    font-size: large;
+}
+
+.employee .lastLoggedIn {
+    color: #777;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/meqasa-logo-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sundrzM.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Agent Dashboard</title>
+</head>
+<body>
+    <div id="header"></div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Employees</li>
+        </ol>
+    </nav>
+
+    <div class="icon-bar">
+        <a href="index.html"><i class="fa fa-home"></i><span>Dashboard</span></a>
+        <a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a>
+        <a href="listings.html"><i class="fa fa-list-alt"></i><span>My Listings</span></a>
+        <a href="leads.html"><i class="fa fa-envelope"></i><span>My Leads</span></a>
+        <a href="products.html"><i class="fa fa-product-hunt"></i><span>Products</span></a>
+        <a class="active" href="employees.html"><i class="fa fa-users"></i><span>Employees</span></a>
+        <a href="engagements.html"><i class="fa fa-line-chart"></i><span>Engagements</span></a>
+        <a href="subscriptions.html"><i class="fa fa-credit-card"></i><span>Subscriptions</span></a>
+    </div>
+
+    <div class="container padding" style="margin-top: 0;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="employee">
+                    <img src="img/avatar.png" />
+                    <div class="name">Adwoa Mansa</div>
+                    <div class="lastLoggedIn">last login at 10.12.21 11:30</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="employee">
+                    <img src="img/avatar.png" />
+                    <div class="name">Kofi Siaw</div>
+                    <div class="lastLoggedIn">last login at 10.12.21 11:30</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button data-toggle="modal" data-target="#myModal" class="addEmployee">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <div>Click to add employee</div>
+                </button>
+            </div>
+        </div>
+    </div>  
+    <div id="footer"></div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Invite an employee</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="inputField">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="eg. John Doe" id=name type="text" />
+                    </div>
+                    <div class="inputField">
+                        <label for="email">Email</label>
+                        <input id="email" placeholder="eg. xyz@mail.com" id=email type="text" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Invite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#header").load("header.html")
+            $("#footer").load("footer.html")
+            $('.icon-bar').hover(function(){
+               $(this).css({
+                   width:220
+               })
+               $('.icon-bar span').css({
+                   display:'inline'
+               })
+               $('.icon-bar a').css({
+                   textAlign:'left'
+               })
+            }, function(){
+                $(this).css({
+                   width:70
+                })
+                $('.icon-bar span').css({
+                    display:'none'
+                })
+                $('.icon-bar a').css({
+                   textAlign:'center'
+               })
+            })
+
+            $(".modal-header .btn-close").click(function(){
+                $('#myModal').modal('toggle')
+            })
+            
+        })
+    </script>
+</body>
+</html>

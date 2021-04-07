@@ -236,14 +236,20 @@
                             <div class="addImage">
                                 <input type="file" multiple accept="image/jpeg, image/png" />
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                <small>Click / Drop photo here</small>
+                                <small>Click / Drop ID here</small>
                             </div>
-                            <select class="form-control">
-                                <option>Select ID Type</option>
-                                <option>Passport</option>
-                                <option>Driver's License</option>
-                                <option>National ID</option>
-                            </select>
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger"><span id="contractType">Select ID Type</span>
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="custom-options">
+                                        <span class="custom-option selected" data-value="commenceBusiness">Passport</span>
+                                        <span class="custom-option" data-value="incorporationCertificate">Driver's License</span>
+                                        <span class="custom-option" data-value="incorporationCertificate">National ID</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="title">
@@ -252,13 +258,19 @@
                             <div class="addImage">
                                 <input type="file" multiple accept="image/jpeg, image/png" />
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                <small>Click / Drop photo here</small>
+                                <small>Click / Drop Certificate here</small>
                             </div>
-                            <select class="form-control">
-                                <option>Select ID Type</option>
-                                <option>Certificate to Commence Business</option>
-                                <option>Business Incorporation Certificate</option>
-                            </select>
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger"><span id="contractType">Select Certificate Type</span>
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="custom-options">
+                                        <span class="custom-option selected" data-value="commenceBusiness">Certificate to Commence Business</span>
+                                        <span class="custom-option" data-value="incorporationCertificate">Business Incorporation Certificate</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -295,6 +307,10 @@
                 $(this).children(".body").children(".auxLinks").css({
                     display:"none"
                 })
+            })
+
+            $('.custom-select-wrapper').on('click', function() {
+                this.querySelector('.custom-select').classList.toggle('open');
             })
 
             $(".ff_one").click(function(){
