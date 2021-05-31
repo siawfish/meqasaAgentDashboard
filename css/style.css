@@ -1846,7 +1846,7 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 .invoiceHidden {
     display: none;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 20px 40px;
     margin-top: -10px;
     border-style: solid;
     border-width: 1px;
@@ -3007,7 +3007,7 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 }
 
 .invoiceHidden table td {
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 .invoiceHidden table td li {
@@ -3015,10 +3015,20 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 }
 
 .invoiceHidden table .bottomRow td {
-    padding: 5px 0;
+    padding: 5px 10px;
     font-size: 12px!important;
 }
 
 .invoiceHidden table .totalRow td {
     font-weight: 700;
+}
+
+.invoiceHidden button {
+    background-color: #fd5573;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+    padding: 8px 15px;
 }
