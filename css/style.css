@@ -4,6 +4,7 @@ body {
     background-color: #f6f7f8;
     font-size: small!important;
     overflow-x: hidden!important;
+    font-weight: 300;
 }
 
 .container {
@@ -52,8 +53,8 @@ body {
 
 .nav-link {
     color: #262637;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
 }
 
 .nav-link:hover {
@@ -61,14 +62,16 @@ body {
 }
 
 .nav-tabs .nav-link {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: none;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #fff;
-    background-color: #fd5573;
-    font-weight: bold;
+    background-color: transparent;
+    padding: 15px;
+    color: #fd5573;
+    border-bottom: 4px solid #fd5573;
 }
 
 .personalInformationPane {
@@ -1837,7 +1840,19 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.invoiceHidden {
+    display: none;
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: -10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
 }
 
 .invoice .left {
@@ -2980,4 +2995,30 @@ footer h2 {  font-size: 15px;  color: #a1a1a1;  line-height: 16px;  text-transfo
 
 .employee .lastLoggedIn {
     color: #777;
+}
+
+.cardTitle {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.invoiceHidden table {
+    width: 100%;
+}
+
+.invoiceHidden table td {
+    padding: 20px 0;
+}
+
+.invoiceHidden table td li {
+    padding: 5px 0;
+}
+
+.invoiceHidden table .bottomRow td {
+    padding: 5px 0;
+    font-size: 12px!important;
+}
+
+.invoiceHidden table .totalRow td {
+    font-weight: 700;
 }

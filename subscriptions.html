@@ -93,23 +93,6 @@
                         </div>
                         <div style="padding-top: 20px;" class="row">
                             <div style="margin-bottom: 10px; font-weight: bold; color: #fd5573;" class="col-12">INVOICES (12)</div>
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="col-12">
                                 <div class="invoice">
@@ -127,59 +110,81 @@
                                         <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="invoiceHidden">
+                                    <Table responsive striped bordered hover>
+                                        <thead>
+                                            <tr>
+                                                <th colSpan="4">Description</th>
+                                                <th>Quantity</th>
+                                                <th>Unit Price</th>
+                                                <th>Tax</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colSpan="4">
+                                                    6- Month Subscription
+                                                    <ul>
+                                                        <li>Unlimited Listing</li>
+                                                        <li>2 Employee Accounts</li>
+                                                        <li>1 Premium Plus Ads</li>
+                                                        <li>7 Premium Ads</li>
+                                                        <li>15 Top Ad</li>
+                                                        <li>3 months Unlimited Bumps</li>
+                                                        <li>150 Bump</li>
 
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
+                                                    </ul>
+                                                </td>
+                                                <td>1.00</td>
+                                                <td>2,836.06</td>
+                                                <td>18.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Subtotal</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL COVID-19 LEVY 1%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL OUTPUT VAT 12.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL NHIL 2.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL GETFL 2.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="totalRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL GHS</td>
+                                                <td>3,382.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </Table>
                                 </div>
                             </div>
 
@@ -441,77 +446,81 @@
                                         <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="invoiceHidden">
+                                    <Table responsive striped bordered hover>
+                                        <thead>
+                                            <tr>
+                                                <th colSpan="4">Description</th>
+                                                <th>Quantity</th>
+                                                <th>Unit Price</th>
+                                                <th>Tax</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colSpan="4">
+                                                    6- Month Subscription
+                                                    <ul>
+                                                        <li>Unlimited Listing</li>
+                                                        <li>2 Employee Accounts</li>
+                                                        <li>1 Premium Plus Ads</li>
+                                                        <li>7 Premium Ads</li>
+                                                        <li>15 Top Ad</li>
+                                                        <li>3 months Unlimited Bumps</li>
+                                                        <li>150 Bump</li>
 
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="invoice">
-                                    <div class="left">
-                                        <div class="pdfWrapper">
-                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                        </div>
-                                        Invoice_2020/10.pdf
-                                    </div>
-                                    <div class="mid">
-                                        <span>Date of invoice</span>
-                                        <span>Nov 02, 2020</span>
-                                    </div>
-                                    <div class="right">
-                                        <button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
-                                    </div>
+                                                    </ul>
+                                                </td>
+                                                <td>1.00</td>
+                                                <td>2,836.06</td>
+                                                <td>18.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Subtotal</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL COVID-19 LEVY 1%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL OUTPUT VAT 12.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL NHIL 2.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="bottomRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL GETFL 2.5%</td>
+                                                <td>2,836.06</td>
+                                            </tr>
+                                            <tr class="totalRow">
+                                                <td colSpan="4"></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>TOTAL GHS</td>
+                                                <td>3,382.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </Table>
                                 </div>
                             </div>
                         </div>
@@ -553,6 +562,18 @@
                 $('.icon-bar a').css({
                     textAlign:'center'
                 })
+            })
+
+            $(".invoice .right button").click(function(){
+                if($(this).parents(".invoice").siblings(".invoiceHidden").css('display')==="none"){
+                    $(this).parents(".invoice").siblings(".invoiceHidden").css({
+                        display:"block"
+                    })
+                } else {
+                    $(this).parents(".invoice").siblings(".invoiceHidden").css({
+                        display:"none"
+                    })
+                }
             })
 
             $("#gotoGetTools").on('click', function(){
